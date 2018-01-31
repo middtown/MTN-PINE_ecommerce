@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>FrontEnd</title>
+	<base href="/">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+	<app-root></app-root>
+
+<!-- SCRIPTS -->
+
+	<!-- jQuery -->
+	<script
+	src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+
+	<!-- Materialize JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<!-- Paypal Checkout.js -->
+	<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+	
+	<!-- Paypal Button Script -->
+	<script>
+		paypal.Button.render({
+			env: 'sandbox', // Or 'production',
+
+			commit: true, // Show a 'Pay Now' button
+
+			style: {
+				color: 'gold',
+				size: 'large',
+				shape: 'rect'
+			},
+
+			payment: function(data, actions) {
+				/* 
+				* Set up the payment here 
+				*/
+			},
+
+			onAuthorize: function(data, actions) {
+				/* 
+				* Execute the payment here 
+				*/
+
+				// Get the payment details
+				return actions.payment.get().then(function(paymentDetails) {
+
+					// Show a confirmation using the details from paymentDetails
+					// Then listen for a click on your confirm button
+					document.querySelector('#confirm-button')
+							.addEventListener('click', function() {
+
+							// Execute the payment
+							return actions.payment.execute().then(function() {
+								// Show a success page to the buyer
+							});
+					});
+				});
+			},
+
+			onCancel: function(data, actions) {
+				/* 
+				 * Buyer cancelled the payment 
+				 */
+			},
+
+			onError: function(err) {
+				/* 
+				 * An error occurred during the transaction 
+				 */
+			}
+		}, '#paypal-button');
+	</script>
+</body>
+</html>
