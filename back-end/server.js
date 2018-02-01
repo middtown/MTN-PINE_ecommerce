@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://middtown@localhost:5432/mtnpine');
 
 //serves static files
-  //app.use(express.static(__dirname + '../back-end/dist'));
+  app.use(express.static(__dirname + '../back-end/dist'));
 
 app.get('/', (req, res) => {
     res.send("Welcome to our api");
@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
 
 //Put the app.get part below any back end routes, because it creates a route that defaults 
 //to the front end if no back end routes exist (by serving up the Angular index.html file).
-// app.get('/*', function(req, res) {
-//     res.sendFile(path.join(__dirname + '/dist/index.html'));
-//   });
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname + '/dist/index.html'));
+  });
 
 //CORS setup to allow other ports from this host
 if(!process.env.DYNO) {
