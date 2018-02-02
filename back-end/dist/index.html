@@ -1,0 +1,53 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>FrontEnd</title><base href="/"><!-- Bootstrap CSS --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.15d72dd3ae45fe67ff25.bundle.css" rel="stylesheet"/></head><body><app-root></app-root><!-- SCRIPTS --><!-- jQuery --><script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Popper --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><!-- Bootstrap --><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><!-- Paypal Checkout.js --><!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script> --><!-- Paypal Button Script --><!-- <script>
+		paypal.Button.render({
+			env: 'sandbox', // Or 'production',
+
+			commit: true, // Show a 'Pay Now' button
+
+			style: {
+				label: 'paypal',
+				color: 'gold',
+				size: 'large',
+				shape: 'rect'
+			},
+
+			payment: function(data, actions) {
+				/* 
+				* Set up the payment here 
+				*/
+			},
+
+			onAuthorize: function(data, actions) {
+				/* 
+				* Execute the payment here 
+				*/
+
+				// Get the payment details
+				return actions.payment.get().then(function(paymentDetails) {
+
+					// Show a confirmation using the details from paymentDetails
+					// Then listen for a click on your confirm button
+					document.querySelector('#confirm-button')
+							.addEventListener('click', function() {
+
+							// Execute the payment
+							return actions.payment.execute().then(function() {
+								// Show a success page to the buyer
+							});
+					});
+				});
+			},
+
+			onCancel: function(data, actions) {
+				/* 
+				 * Buyer cancelled the payment 
+				 */
+			},
+
+			onError: function(err) {
+				/* 
+				 * An error occurred during the transaction 
+				 */
+			}
+		}, '#paypal-button');
+	</script> --><script type="text/javascript" src="inline.1ec0b34165c66cf9f147.bundle.js"></script><script type="text/javascript" src="polyfills.f20484b2fa4642e0dca8.bundle.js"></script><script type="text/javascript" src="main.a56f35efcad730816a67.bundle.js"></script></body></html>
