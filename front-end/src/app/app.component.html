@@ -15,17 +15,37 @@
       </svg>
     </a>
     <a class="py-2 d-none d-md-inline-block" routerLink="/">Home</a>
-    <a class="py-2 d-none d-md-inline-block" routerLink="/items">Product</a>
+
+    <li class="dropdown py-2 d-none d-md-inline-block">
+      <a  data-toggle="dropdown" class="dropdown-toggle">Product
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a routerLink="/items">Dropdown item 1</a>
+        </li>
+        <li>
+          <a href="#">Dropdown item 2</a>
+        </li>
+        <li>
+          <a href="#">Dropdown item 3</a>
+        </li>
+        <li>
+          <a href="#">Dropdown item 4</a>
+        </li>
+      </ul>
+    </li>
+
+
     <a class="py-2 d-none d-md-inline-block" routerLink="/about">Features</a>
     <a class="py-2 d-none d-md-inline-block" routerLink="/contact">Contact</a>
     <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a>
   </div>
 
-
 </nav>
 
 
-<app-cart></app-cart>
+
 
 <router-outlet></router-outlet>
 

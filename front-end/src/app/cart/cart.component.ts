@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { CARTCOUNT } from '../cart';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
 
-
+	carts :number[];
 
   constructor() { }
 
   ngOnInit() {
-  	// console.log(this.cartCount);
   }
 
 }

@@ -1,6 +1,11 @@
+<app-item-detail [item]="selectedItem"></app-item-detail>
+
 <div class="row text-center">
-	<div class="col col-6 col-lg-4" *ngFor="let item of items">
+	<div class="col col-6 col-lg-4" 
+		*ngFor="let item of items"
+		(click)="onSelect(item)">
+
 		<h1>{{item.name}}</h1>
-		<button (click)="addToCart(item.id)">Add to Cart</button>
 	</div>
 </div>
+
