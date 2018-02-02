@@ -11,20 +11,8 @@ app.use(bodyParser.json());
 const mtnpineRouter = require('./config/routes.js');
 app.use(mtnpineRouter);
 
-
-
-/************
- * DATABASE *
- ************/
-
-
-// //connection to heroku and local comp.
-// const localHost = require("./env.js");
-// let sequelize = new Sequelize(process.env.DATABASE_URL || localHost.aaron || localHost.josh || localHost.ricky );
-
 //serves static files
 app.use(express.static(__dirname + '../back-end/dist'));
-
 
 //CORS setup to allow other ports from this host
 if(!process.env.DYNO) {
@@ -37,7 +25,6 @@ if(!process.env.DYNO) {
 }
 
 const port = process.env.PORT || 3000;
-
 app.listen(port, () => {
 	console.log(`Listening on port ${port}`);
 });
