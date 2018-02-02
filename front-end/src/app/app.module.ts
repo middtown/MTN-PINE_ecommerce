@@ -25,10 +25,7 @@ import { CartComponent } from './cart/cart.component';
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
-=======
     AppRoutingModule,
->>>>>>> bd839d7d78f47faccb97f4ee2be1288f525a2596
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

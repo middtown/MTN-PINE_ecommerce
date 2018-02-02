@@ -19,7 +19,8 @@ app.use(mtnpineRouter);
 
 
 //connection to heroku and local comp.
-let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://middtown@localhost:5432/mtnpine');
+const localHost = require("./env.js");
+let sequelize = new Sequelize(process.env.DATABASE_URL || localHost.aaron || localHost.josh || localHost.ricky );
 
 //serves static files
 app.use(express.static(__dirname + '../back-end/dist'));
