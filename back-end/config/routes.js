@@ -13,7 +13,7 @@ router.get('/api', (req, res) => {
   
 // index
 router.get('/api/items', itemsController.items); 
-router.get('/api/items/category', itemsByCategory);
+router.get('/api/items/category', itemsController.category);
 
 
 

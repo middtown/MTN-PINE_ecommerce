@@ -1,7 +1,8 @@
 //Connect
 const Sequelize = require('sequelize');
 
-// //connection to heroku and local comp.
+// //connection to heroku and local comp for three people.
+const localHost = require("../env.js");
 let sequelize = new Sequelize(process.env.DATABASE_URL || localHost.aaron || localHost.josh || localHost.ricky );
 
 //Export models and Sequelize for seed and dbSetup

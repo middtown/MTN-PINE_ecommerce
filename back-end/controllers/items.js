@@ -15,7 +15,7 @@ const itemsByCategory = (req, res) => {
     		category: wallet //hardcoded ... replace with id #itemClicked
   		}
 	});
-}
+};
 
 //Put the app.get part below any back end routes, because it creates a route that defaults 
 //to the front end if no back end routes exist (by serving up the Angular index.html file).
@@ -26,5 +26,6 @@ const noRoutesDetected = (req, res) => {
 
 module.exports = {
 	items: getItems,
+	category: itemsByCategory,
 	default: noRoutesDetected
 };
