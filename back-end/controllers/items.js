@@ -1,9 +1,25 @@
-const db = require('../models');
-const Item = db.models.Item;
+const db = require('../models'); //grabbing db from models folder for router controll
+const Item = db.models.Item; //specifies what exaclty the model needed
+const User = db.models.User;
 
+// Find all items in the items table
 const getItems = (req, res) => {
 	Item.findAll().then(items => {
 		res.json(items);
+	});
+};
+
+// SELECT * FROM post WHERE category = itemClicked
+const itemsByCategory = (req, res) => {
+	Item.findAll({
+  		where: {
+    		category: wallet //hardcoded ... replace with id #itemClicked
+  		}
+	});
+};
+const getUserProfile = (req, res) => {
+	User.findAll().then(profile => {
+		res.json(profile);
 	});
 };
 
@@ -11,10 +27,11 @@ const getItems = (req, res) => {
 //to the front end if no back end routes exist (by serving up the Angular index.html file).
 const noRoutesDetected = (req, res) => {
     res.sendFile(path.join(__dirname + '/dist/index.html'));
-  };
-
+};
 
 module.exports = {
 	items: getItems,
+	category: itemsByCategory,
+	user : getUserProfile,
 	default: noRoutesDetected
 };

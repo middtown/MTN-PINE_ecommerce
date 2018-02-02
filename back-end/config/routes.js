@@ -8,21 +8,19 @@ router.get('/api', (req, res) => {
     res.send("Welcome MTN-PINE api");
   });
 
-
 //Item Routes
+
   
 // index
-router.get('/api/items', itemsController.items);
+router.get('/api/items', itemsController.items); 
+router.get('/api/items/category', itemsController.category);
 
 
 // User Routes
-
-
+router.get('/api/profile', itemsController.user);
 
 
 // Orders Routes
-
-
 
 
 // Shipping Addresses Routes
@@ -33,3 +31,4 @@ router.get('/api/items', itemsController.items);
 router.get('/*', itemsController.default);
 
 module.exports = router;
+

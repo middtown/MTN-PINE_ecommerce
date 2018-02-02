@@ -1,7 +1,9 @@
 //Connect
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('postgres://middtown@localhost:5432/mtnpine');
+// //connection to heroku and local comp for three people.
+const localHost = require("../env.js");
+let sequelize = new Sequelize(process.env.DATABASE_URL || localHost.aaron || localHost.josh || localHost.ricky );
 
 //Export models and Sequelize for seed and dbSetup
 module.exports.Sequelize = Sequelize;

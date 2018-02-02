@@ -57,23 +57,59 @@ const userCreate = () => {
  };
 
 const addressCreate = () => {
-	return DB.ShippingAddress.create({
-		nickname: 'new house',
-		street: '123 Coder St',
-		apt: 'C4',
-		country: 'United States of America',
-		state: 'Colorado',
-		city: 'Denver',
-		postalCode: 98126
-	});
+	return DB.ShippingAddress.bulkCreate([
+		{
+			nickname: 'new house',
+			street: '123 Coder St',
+			apt: 'C4',
+			country: 'United States of America',
+			state: 'Colorado',
+			city: 'Denver',
+			postalCode: 98126
+		}, {
+			nickname: 'orange house',
+			street: '4556 Pumkin Ave',
+			apt: '',
+			country: 'United States of America',
+			state: 'Seattle',
+			city: 'Nevada',
+			postalCode: 90210
+		}, {
+			nickname: 'black house',
+			street: '1st st & ash',
+			apt: 'K9',
+			country: 'Europe',
+			state: 'toddle',
+			city: 'garmin',
+			postalCode: 903-2876
+		}, {
+			nickname: 'glass house',
+			street: '967 gladwell & malcolm',
+			apt: '',
+			country: 'United States of America',
+			state: 'Colorado',
+			city: 'Aurora',
+			postalCode: 90012
+		}
+	]);
  };
 
 const orderCreate = () => {
-	return DB.Order.create({
-		item_id: 1,
-		quantity: 1,
-		shippingAddress_id: 1
-	});
+	return DB.Order.bulkCreate([
+		{
+			item_id: 3,
+			quantity: 2,
+			shippingAddress_id: 1
+		}, {
+			item_id: 1,
+			quantity: 1,
+			shippingAddress_id: 2
+		}, {
+			item_id: 2,
+			quantity: 4,
+			shippingAddress_id: 4
+		}
+	]);
  };
 
 itemCreate()
