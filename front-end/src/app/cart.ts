@@ -1,0 +1,1 @@
+export var CARTCOUNT :number = 0;
