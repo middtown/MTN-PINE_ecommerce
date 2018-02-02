@@ -12,7 +12,9 @@ router.get('/api', (req, res) => {
 //Item Routes
   
 // index
-router.get('/api/items', itemsController.items);
+router.get('/api/items', itemsController.items); 
+router.get('/api/items/category', itemsByCategory);
+
 
 
 // User Routes
