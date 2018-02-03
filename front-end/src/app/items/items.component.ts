@@ -15,6 +15,7 @@ export class ItemsComponent implements OnInit {
 
   onSelect(item: Item): void {
       this.selectedItem = item;
+      window.scrollTo(0, 0);
     }
 
 	addToCart(id) {
