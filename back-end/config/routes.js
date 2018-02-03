@@ -3,9 +3,10 @@ const router = express.Router();
 const path = require('path');
 const itemsController = require('../controllers/items.js');
 
+
 // sanity check page
 router.get('/api', (req, res) => {
-    res.send("Welcome MTN-PINE api");
+    res.send("Welcome to the MTN-PINE A.P.I. !");
   });
 
 //Item Routes
@@ -13,8 +14,8 @@ router.get('/api', (req, res) => {
   
 // index
 router.get('/api/items', itemsController.items); 
-router.get('/api/items/category', itemsController.category);
-
+router.get('/api/items/:id', itemsController.oneItem);
+// router.get('/api/items/category', itemsController.category);
 
 // User Routes
 router.get('/api/profile', itemsController.user);
