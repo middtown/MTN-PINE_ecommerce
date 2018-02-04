@@ -16,7 +16,6 @@ let User = sequelize.import("./user");
 let Address = sequelize.import("./shippingAddress");
 let Order = sequelize.import("./order");
 
-
 module.exports.models = {
 	Item: Item,
 	User: User,

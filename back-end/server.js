@@ -8,11 +8,11 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+//serves static files
+app.use(express.static(__dirname + '/dist'));
+
 const mtnpineRouter = require('./config/routes.js');
 app.use(mtnpineRouter);
-
-//serves static files
-app.use(express.static(__dirname + '../back-end/dist'));
 
 //CORS setup to allow other ports from this host
 if(!process.env.DYNO) {
