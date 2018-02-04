@@ -1,7 +1,16 @@
-<div *ngIf="item">
+<div class="row" *ngIf="item">
+	
+	<h2 class="col-12">{{ item.name | uppercase }} Details</h2>
 
-  <h2>{{ item.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{item.id}}</div>
-  <button>Add to Cart</button>
-	<!-- (click)="addToCart(item.id)" -->
+	<img class="col-sm-12 col-md-6 " src="assets/products/bifold2.jpg" alt="Bifold Wallet">
+	
+	<div class="col-6 row">
+		
+		  <div class="col-12"><span>id: </span>{{item.id}}</div>
+		  <div class="col-12"><span>description: </span>{{item.description}}</div>
+
+		  <button>Add to Cart</button>
+			<!-- (click)="addToCart(item.id)" -->
+
+	</div>
 </div>
