@@ -13,13 +13,13 @@ module.exports.sequelize = sequelize;
 
 let Item = sequelize.import("./item");
 let User = sequelize.import("./user");
-let ShippingAddress = sequelize.import("./shippingAddress");
+let Address = sequelize.import("./shippingAddress");
 let Order = sequelize.import("./order");
 
 
 module.exports.models = {
 	Item: Item,
 	User: User,
-	ShippingAddress: ShippingAddress,
+	Address: Address,
 	Order: Order
 };
