@@ -28,7 +28,9 @@ router.get('/api/profile', itemsController.user);
 
 //Put the app.get part below any back end routes, because it creates a route that defaults 
 //to the front end if no back end routes exist (by serving up the Angular index.html file).
-router.get('/*', itemsController.default);
+router.get('/*', (req, res) => {
+	res.render('index')
+});
 
 module.exports = router;
 
