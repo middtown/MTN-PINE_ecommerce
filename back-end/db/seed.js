@@ -57,7 +57,7 @@ const userCreate = () => {
  };
 
 const addressCreate = () => {
-	return DB.ShippingAddress.bulkCreate([
+	return DB.Address.bulkCreate([
 		{
 			nickname: 'new house',
 			street: '123 Coder St',
@@ -69,7 +69,7 @@ const addressCreate = () => {
 		}, {
 			nickname: 'orange house',
 			street: '4556 Pumkin Ave',
-			apt: '',
+			apt: 'a7',
 			country: 'United States of America',
 			state: 'Seattle',
 			city: 'Nevada',
@@ -81,13 +81,13 @@ const addressCreate = () => {
 			country: 'Europe',
 			state: 'toddle',
 			city: 'garmin',
-			postalCode: 903-2876
+			postalCode: 90328
 		}, {
 			nickname: 'glass house',
 			street: '967 gladwell & malcolm',
-			apt: '',
+			apt: 'b34',
 			country: 'United States of America',
-			state: 'Colorado',
+			state: 'mississippi',
 			city: 'Aurora',
 			postalCode: 90012
 		}
@@ -111,6 +111,7 @@ const orderCreate = () => {
 		}
 	]);
  };
+
 
 itemCreate()
 	.then(userCreate)
