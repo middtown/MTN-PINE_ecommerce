@@ -1,46 +1,34 @@
 
 
 <nav class="site-header sticky-top py-1 navbar-trans">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-      </svg>
-    </a>
-    <a class="py-2 d-none d-md-inline-block" routerLink="/">Home</a>
-
-    <li class="dropdown py-2 d-none d-md-inline-block">
-      <a  data-toggle="dropdown" class="dropdown-toggle">Product
+  <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
+    <li class="d-flex dropdown py-2 d-none d-md-inline-block align-items-center">
+      <a  data-toggle="dropdown" class="dropdown-toggle nav">SHOP
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-        <li>
-          <a routerLink="/items">Dropdown item 1</a>
+        <li class="">
+          <a routerLink="/items">WALLETS</a>
         </li>
         <li>
-          <a href="#">Dropdown item 2</a>
+          <a href="#">BAGS</a>
         </li>
         <li>
-          <a href="#">Dropdown item 3</a>
+          <a href="#">ACCESSORIES</a>
         </li>
         <li>
           <a href="#">Dropdown item 4</a>
         </li>
       </ul>
+    <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/about">ABOUT</a>
+    <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/"><img src="/assets/mtnpine_linewhite.png" alt="logo" class='logoMain'></a>
+    <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/contact">CONTACT</a>
     </li>
-
-
-    <a class="py-2 d-none d-md-inline-block" routerLink="/about">Features</a>
-    <a class="py-2 d-none d-md-inline-block" routerLink="/contact">Contact</a>
-    <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a>
+    <!-- <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a> -->
   </div>
+  <!-- <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a>
+  </div> -->
 
 </nav>
 
@@ -141,4 +129,3 @@
     </div>
   </div>
 </footer>
-
