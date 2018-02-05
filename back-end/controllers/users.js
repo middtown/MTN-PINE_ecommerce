@@ -19,9 +19,15 @@ const getUserProfile = (req, res) => {
 
 // Create User
 const createUser = (req, res) => {
-	User.create(req.body).then(user => {
-    if(!user) res.send("user not saved");
-    else res.json(user);
+	User.create({
+		name: req.body.name,
+		email: req.body.emal,
+		password: req.body.password
+	}).then(user => {
+		res.json(user);
+  }).catch(err => {
+  		console.error("create new user failed " + err);
+		res.send("created new user failed " + err);
   });
 };
 
@@ -55,6 +61,7 @@ const createNewAddress = (req, res) => {
 		res.json(newUserAddress);
 	}).catch(err => {
 		console.error("create address failed " + err);
+		res.send("created new address failed " + err);
 	});
 };
 

@@ -6,6 +6,7 @@ module.exports = function(sequelize, Sequelize){
 	    apt: Sequelize.STRING,
 	    country: Sequelize.STRING,
 	    state: Sequelize.STRING,
+	    city: Sequelize.STRING,
 	    postalCode: Sequelize.INTEGER
   });
 
