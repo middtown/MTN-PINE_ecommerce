@@ -17,6 +17,8 @@ import { CartComponent } from './cart/cart.component';
 import { ItemService } from './item.service';
 import { CartService } from './cart.service';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
     AboutComponent,
     ContactComponent,
     CartComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    SignUpComponent,
+    LogInComponent
   ],
   imports: [
     BrowserModule,
