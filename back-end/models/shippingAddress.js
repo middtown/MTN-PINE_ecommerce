@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize){
 
-  let model = sequelize.define("ShippingAddresses", {    
+  let model = sequelize.define("ShippingAddress", {    
 	    nickname: Sequelize.STRING,
 	    street: Sequelize.STRING,
 	    apt: Sequelize.STRING,
