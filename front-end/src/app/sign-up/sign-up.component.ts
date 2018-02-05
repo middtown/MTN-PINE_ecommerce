@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
 import { Router } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -13,12 +13,23 @@ export class SignUpComponent implements OnInit {
 	 
 	newUser = <any>{};
 
-	onNewUser(user) {
-		console.log(user);
-		return this.http.post(`${this.baseUrl}/api/profile/new`, user);
+	onNewUser(newUser) {
+		console.log(newUser);
+		this.userService.saveUser(newUser)
+		.subscribe((response)=> {
+			let user = response.json();
+			console.log(user);
+			// TODO - change navigate location, display login success using either:
+				// - home page with currentUser displayed, login/signup hidden
+				// - go to items or profile page with success flash message
+			this.router.navigate(["/items"]);
+		});
 	}
 
-  constructor(private router :Router, private http :Http) { }
+  constructor(
+  	private router :Router, 
+  	private userService :UserService
+  ) { }
 
   ngOnInit() {
   }
