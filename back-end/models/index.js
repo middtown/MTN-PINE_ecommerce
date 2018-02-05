@@ -4,7 +4,7 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 // Connection to heroku and local comp for three people.
-const localHost = process.env.AARONSLOCALMACHINE || process.env.JOSHUASLOCALMACHINE || process.env.RICKYSLOCALMACHINE || require("../env.js");
+const localHost = require("../env.js") || process.env.AARONSLOCALMACHINE || process.env.JOSHUASLOCALMACHINE || process.env.RICKYSLOCALMACHINE;
 let sequelize = new Sequelize(process.env.DATABASE_URL || localHost.aaron || localHost.josh || localHost.ricky );
 
 //Export models and Sequelize for seed and dbSetup
