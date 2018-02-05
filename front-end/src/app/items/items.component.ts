@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from './item';
-import { ITEMS } from './mock-items';
-import { CARTCOUNT } from '../cart';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-items',
@@ -10,15 +9,28 @@ import { CARTCOUNT } from '../cart';
 })
 export class ItemsComponent implements OnInit {
 
-	items = ITEMS;
+	items :Item[];
+
+  selectedItem :Item;
+
+  onSelect(item :Item): void {
+      this.selectedItem = item;
+      window.scrollTo(0, 0);
+    }
 
 	addToCart(id) {
 		console.log(id);
 	}
 
-  constructor() { }
+  getItems() {
+    this.itemService.getItems()
+    .subscribe((items)=> this.items = items);
+  }
+
+  constructor(private itemService :ItemService) { }
 
   ngOnInit() {
+    this.getItems();
   }
 
 }

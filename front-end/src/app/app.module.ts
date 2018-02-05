@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
+import { ItemService } from './item.service';
+import { CartService } from './cart.service';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 
 @NgModule({
@@ -21,14 +24,15 @@ import { CartComponent } from './cart/cart.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    CartComponent
+    CartComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [ItemService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

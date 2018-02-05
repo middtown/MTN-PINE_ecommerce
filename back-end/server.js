@@ -7,23 +7,13 @@ const path = require('path');
 const cookieParser = require("cookie-parser");
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+//serves static files
+app.use(express.static(__dirname + '/dist'));
 
 const mtnpineRouter = require('./config/routes.js');
 app.use(mtnpineRouter);
-
-
-
-/************
- * DATABASE *
- ************/
-
-
-//connection to heroku and local comp.
-let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://middtown@localhost:5432/mtnpine');
-
-//serves static files
-app.use(express.static(__dirname + '../back-end/dist'));
-
 
 //CORS setup to allow other ports from this host
 if(!process.env.DYNO) {
@@ -36,7 +26,6 @@ if(!process.env.DYNO) {
 }
 
 const port = process.env.PORT || 3000;
-
 app.listen(port, () => {
 	console.log(`Listening on port ${port}`);
 });
