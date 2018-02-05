@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+	baseUrl = 'http://localhost:3000';
+	 
+	newUser = <any>{};
+
+	onNewUser(user) {
+		console.log(user);
+		return this.http.post(`${this.baseUrl}/api/profile/new`, user);
+	}
+
+  constructor(private router :Router, private http :Http) { }
 
   ngOnInit() {
   }
