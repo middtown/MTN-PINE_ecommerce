@@ -7,6 +7,7 @@ module.exports = function(sequelize, Sequelize){
 	    shippingAddress_id: Sequelize.INTEGER,
 	    order_id: Sequelize.INTEGER
   });
-
+  
   return model;
 };
+
