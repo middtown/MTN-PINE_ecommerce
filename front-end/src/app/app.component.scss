@@ -21,7 +21,7 @@ $offwhite: #f7f7f5;
 .site-header a {
   color: $offwhite;
   transition: ease-in-out color .15s;
-  height: 100px;
+  height: 70px;
   margin-top: 20px;
 }
 .site-header a:hover {
@@ -38,10 +38,19 @@ $offwhite: #f7f7f5;
 //   background-color: rgba(255, 255, 255, 0.124);
 // }
 .logoMain {
-  max-height: 80px;
+  max-height: 50px;
 }
 .nav {
   margin: 0 20px;
+}
+
+.dropdown-menu.show {
+  background-color: $grey;
+  padding: 1rem;
+}
+
+.dropdown-toggle::after {
+  display:none
 }
 
 
