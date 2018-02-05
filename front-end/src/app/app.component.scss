@@ -21,7 +21,8 @@ $offwhite: #f7f7f5;
 .site-header a {
   color: $offwhite;
   transition: ease-in-out color .15s;
-  height: 200px;
+  height: 100px;
+  margin-top: 20px;
 }
 .site-header a:hover {
   color: #fff;

@@ -1,30 +1,42 @@
 
 
-<nav class="site-header sticky-top py-1 navbar-trans">
-  <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
-    <li class="d-flex dropdown py-2 d-none d-md-inline-block align-items-center">
-      <a  data-toggle="dropdown" class="dropdown-toggle d-flex py-2 d-none d-md-inline-block align-items-center nav">SHOP
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu">
-        <li>
-          <a routerLink="/items">WALLETS</a>
-        </li>
-        <li>
-          <a href="#">BAGS</a>
-        </li>
-        <li>
-          <a href="#">ACCESSORIES</a>
-        </li>
-        <li>
-          <a href="#">Dropdown item 4</a>
-        </li>
-      </ul>
+<nav class="navbar site-header sticky-top py-1 navbar-trans .navbar-expand-lg ">
+  <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center .navbar-toggler">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-flex dropdown py-2 d-none d-md-inline-block align-items-center row">
 
-    <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/about">ABOUT</a>
-    <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/"><img src="/assets/mtnpine_linewhite.png" alt="logo" class='logoMain'></a>
-    <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/contact">CONTACT</a>
-    </li>
+      <div class="flex-col  d-md-inline-block">
+        <a  data-toggle="dropdown" class="dropdown-toggle d-flex py-2 d-none d-md-inline-block align-items-center nav">SHOP
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a routerLink="/items">WALLETS</a>
+          </li>
+          <li>
+            <a href="#">BAGS</a>
+          </li>
+          <li>
+            <a href="#">ACCESSORIES</a>
+          </li>
+          <li>
+            <a href="#">Dropdown item 4</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-col  d-md-inline-block">
+        <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav navbar-brand" routerLink="/"><img src="/assets/mtnpine_linewhite.png" alt="logo" class='logoMain'></a>
+      </div>
+
+      <div class="flex-col  d-md-inline-block">
+        <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/about">ABOUT</a>
+        <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/contact">CONTACT</a>
+      </div>
+    </div>
     <!-- <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a> -->
   </div>
   <!-- <div class="container d-flex flex-column flex-md-row justify-content-between">
