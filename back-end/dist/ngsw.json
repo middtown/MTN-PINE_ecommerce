@@ -9,8 +9,8 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/inline.9052e1db2707faa240fc.bundle.js",
-        "/main.d69ac293716346e3a01a.bundle.js",
+        "/inline.ac5d410bb594b66641d0.bundle.js",
+        "/main.ecf1c49f3e935ea6145c.bundle.js",
         "/polyfills.f20484b2fa4642e0dca8.bundle.js",
         "/scripts.13dd67a5db9a9e1f2a87.bundle.js",
         "/styles.52c5d9b1867724445574.bundle.css"
@@ -96,9 +96,9 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/inline.9052e1db2707faa240fc.bundle.js": "962fa21140fe2a7d756ae9bbca73b82c27c64d0a",
+    "/inline.ac5d410bb594b66641d0.bundle.js": "82f30d42af4fc938df6f7bc52f292be169acb7b8",
     "/assets/background1.jpg": "826b7de1100746d72b38097ef60a6f817f27a826",
-    "/main.d69ac293716346e3a01a.bundle.js": "d5d3c86c3893b9374086c0ecee0f05a363b3e41a",
+    "/main.ecf1c49f3e935ea6145c.bundle.js": "de5f0a6981fb039c5022f9a498bd3875d7ce6a2f",
     "/assets/products/belt1.jpg": "2431a18600a6a33ef2f4afe1c45e6d81457b0aac",
     "/polyfills.f20484b2fa4642e0dca8.bundle.js": "0b0af365e031b7cbba789493d311e94192720c68",
     "/assets/products/belt2.jpg": "994d13de9fe515b87b1bd96869901006e1f5ce66",
@@ -108,7 +108,7 @@
     "/assets/products/bifold2.jpg": "2c732e9e44393a0cf7bdb12342d79b038da451c5",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
     "/assets/products/bifold3.jpg": "e70ccd6cd2765c93227e5e49f70354622ad50094",
-    "/index.html": "fa51a5bd7784b5d4bdb425dbc299be0ff791add6",
+    "/index.html": "b67aafbab8688aa87a1f3507731f0a01e4548156",
     "/assets/products/biforld4.jpg": "0c0288438013db0506d42a2f803f26805e257772",
     "/assets/products/coasters.jpg": "1015b376c724b3d487e9b69472b1e80b3ef599d0",
     "/assets/products/i-NbpBsfR-X2.jpg": "8e70a0a0e91507b9a5dab7546357cc47885f7f79",
