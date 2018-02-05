@@ -13,14 +13,15 @@ $offwhite: #f7f7f5;
  * Custom translucent site header
  */
 
-.site-header {
-  background-color: rgba(255, 255, 255, 0.124);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-}
+// .site-header {
+//   background-color: rgba(255, 255, 255, 0.124);
+//   -webkit-backdrop-filter: saturate(180%) blur(20px);
+//   backdrop-filter: saturate(180%) blur(20px);
+// }
 .site-header a {
   color: $offwhite;
   transition: ease-in-out color .15s;
+  height: 200px;
 }
 .site-header a:hover {
   color: #fff;
@@ -32,11 +33,20 @@ $offwhite: #f7f7f5;
 // navbar //
 ////////////
 
-.dropdown-menu {
-  background-color: rgba(255, 255, 255, 0.124);
+// .dropdown-menu {
+//   background-color: rgba(255, 255, 255, 0.124);
+// }
+.logoMain {
+  max-height: 80px;
+}
+.nav {
+  margin: 0 20px;
 }
 
 
+/////////////
+// sidebar //
+/////////////
 
 /*
  * Extra utilities
