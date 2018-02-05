@@ -4,42 +4,14 @@ $offwhite: #f7f7f5;
 
 
 
-
-// .container {
-//   max-width: 960px;
-// }
-
-/*
- * Custom translucent site header
- */
-
-// .site-header {
-//   background-color: rgba(255, 255, 255, 0.124);
-//   -webkit-backdrop-filter: saturate(180%) blur(20px);
-//   backdrop-filter: saturate(180%) blur(20px);
-// }
-.site-header a {
-  color: $offwhite;
-  transition: ease-in-out color .15s;
-  height: 70px;
-  margin-top: 20px;
-}
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-
 ////////////
 // navbar //
 ////////////
 
-// .dropdown-menu {
-//   background-color: rgba(255, 255, 255, 0.124);
-// }
 .logoMain {
   max-height: 50px;
 }
+
 .nav {
   margin: 0 20px;
 }
@@ -53,6 +25,16 @@ $offwhite: #f7f7f5;
   display:none
 }
 
+.site-header a {
+  color: $offwhite;
+  transition: ease-in-out color .15s;
+  height: 70px;
+  margin-top: 20px;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
 
 /////////////
 // sidebar //
@@ -62,10 +44,17 @@ $offwhite: #f7f7f5;
  * Extra utilities
  */
 
-.border-top { border-top: 1px solid #e5e5e5; }
-.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
 
 .flex-equal > * {
   -ms-flex: 1;
@@ -111,4 +100,14 @@ $offwhite: #f7f7f5;
 
 footer {
   background-image: url('/assets/topogreen.jpg');
+  background-size: contain;
+  max-width: 100%;
+  color: $offwhite;
+  text-align: center;
+  display: block;
+}
+
+.mpLogo {
+  height: 30px;
+
 }
