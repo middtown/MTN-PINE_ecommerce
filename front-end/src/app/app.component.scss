@@ -35,47 +35,19 @@ $offwhite: #f7f7f5;
   color: #fff;
   text-decoration: none;
 }
+.container {
+  width: 100%;
+  display: table-cell;
+}
+
+.cart{
+  position: absolute;
+  margin-top: -5px;
+}
 
 /////////////
 // sidebar //
 /////////////
-
-/*
- * Extra utilities
- */
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-
-
-////////////
-// Footer //
-////////////
-
-footer {
-  background-image: url('/assets/topogreen.jpg');
-  background-size: contain;
-  max-width: 100%;
-  color: $offwhite;
-  text-align: center;
-  display: block;
-}
-
-.mpLogo {
-  height: 30px;
-
-}
-
-
-
-
-
 
 .modal.left .modal-dialog,
 	.modal.right .modal-dialog {
@@ -124,3 +96,36 @@ footer {
 		border-bottom-color: #EEEEEE;
 		background-color: #FAFAFA;
 	}
+
+
+/*
+ * Extra utilities
+ */
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+////////////
+// Footer //
+////////////
+
+footer {
+  background-image: url('/assets/topogreen.jpg');
+  background-size: contain;
+  max-width: 100%;
+  color: $offwhite;
+  text-align: center;
+  display: block;
+}
+
+.mpLogo {
+  height: 30px;
+
+}
