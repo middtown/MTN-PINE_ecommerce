@@ -16,6 +16,8 @@ export class SignUpComponent implements OnInit {
 		this.userService.saveUser(newUser)
 		.subscribe((response)=> {
 			let user = response.json();
+			console.log('newUser');
+			console.log(response);
 			console.log(user);
 			this.userService.currentUser = user;
 			this.router.navigate(["/items"]);
