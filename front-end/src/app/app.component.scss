@@ -26,11 +26,14 @@ $offwhite: #f7f7f5;
   display:none
 }
 
+.row {
+	margin-top: 4vh;
+}
+
 .site-header a {
   color: $offwhite;
   transition: ease-in-out color .15s;
   height: 70px;
-  margin-top: 20px;
 }
 .site-header a:hover {
   color: #fff;
@@ -113,6 +116,9 @@ $offwhite: #f7f7f5;
   border-bottom: 1px solid #e5e5e5;
 }
 
+.container-fluid {
+	padding: 0;
+}
 
 
 ////////////
@@ -132,3 +138,20 @@ footer {
   height: 30px;
 
 }
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+	and (max-device-width: 812px) {
+		.cart {
+			margin: -30vh -10vw 0 0;
+		}
+	}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) {
+  	a .nav {
+  		font-size: 4rem;
+  	}
+  }
