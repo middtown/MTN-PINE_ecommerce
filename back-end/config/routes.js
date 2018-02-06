@@ -15,8 +15,9 @@ router.get('/api', (req, res) => {
 
 // index
 router.get('/api/items', itemsController.items); 
+router.get('/api/items/category', itemsController.categoryAll);
+router.get('/api/items/category/:cat', itemsController.category);
 router.get('/api/items/:id', itemsController.oneItem);
-router.get('/api/items/category', itemsController.category);
 
 								// --------------------  User Routes. -------------------- //
 
