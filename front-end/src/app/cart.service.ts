@@ -5,10 +5,14 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class CartService {
 
-	cart :number[];
+	cart = <any>[];
+
+	getCart() {
+		return of(this.cart);
+	}
 
 	addToCart(id) {
-		this.cart.push(1);
+		this.cart.push(id);
 		console.log(this.cart);
 	}
 

@@ -1,0 +1,26 @@
+$grey:#6a6a6a;
+$green:#5b665b;
+$offwhite: #f7f7f5;
+
+.container-fluid {
+  background-color: rgba(247, 247, 245, .5);
+}
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-bg {
+  background-image: url('/assets/background1.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -22vh;
+  position: relative;
+}
+.header {
+  color: $offwhite;
+}

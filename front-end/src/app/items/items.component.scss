@@ -3,11 +3,15 @@ div.col {
 }
 .row {
 	width: 100%;
+	margin: 0;
 }
 img {
-	max-width: 33vw;
+	max-width: 30vw;
 }
 .container-fluid {
+	padding: 0;
+}
+.bg-container {
 	background-image: url('/assets/background1.jpg');
 	height: 100%;
 	background-attachment: fixed;
@@ -16,9 +20,21 @@ img {
 	background-size: cover;
 	margin-top: - 180px;
 	position: relative;
-	padding-top: 16vh;
+	padding-top: 15vh;
 }
 .col {
 	background-color: rgba(247, 247, 245, .5);
 	margin: 0;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+	and (max-device-width: 812px) {
+		.container-fluid {
+			padding-top: 6vh;
+		}
+
+		img {
+			max-width: 42vw;
+		}
+	}
