@@ -38,6 +38,12 @@ describe('ItemsComponent', () => {
       component.onSelect(0);
       expect(component.selectedItem).toBe(0);
     });
+
+    it('should be able to select a random item', ()=> {
+      let num = Math.floor(Math.random() * 6);
+      component.onSelect(num);
+      expect(component.selectedItem).toBe(num);
+    });
   });
 
   // getItems()
