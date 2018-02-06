@@ -34,6 +34,11 @@ export class ItemsComponent implements OnInit {
   constructor(private itemService :ItemService) { }
 
   ngOnInit() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
     this.getItems();
   }
 

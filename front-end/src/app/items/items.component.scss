@@ -3,9 +3,10 @@ div.col {
 }
 .row {
 	width: 100%;
+	margin: 0;
 }
 img {
-	max-width: 33vw;
+	max-width: 30vw;
 }
 .container-fluid {
 	padding: 0;
@@ -31,5 +32,9 @@ img {
 	and (max-device-width: 812px) {
 		.container-fluid {
 			padding-top: 6vh;
+		}
+
+		img {
+			max-width: 42vw;
 		}
 	}
