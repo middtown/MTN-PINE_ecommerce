@@ -30,10 +30,23 @@ $offwhite: #f7f7f5;
 
 }
 
+h1 {
+  color: $grey;
+}
 img {
   width: 100%;
 }
 span {
   font-size: 1rem;
-  padding: 0 1vw;
+  // padding: 0;
+}
+ul {
+  padding-left: 1vw;
+}
+li {
+  font-size: 1.5rem;
+  list-style: none;
+  
+    color: $green;
+  
 }

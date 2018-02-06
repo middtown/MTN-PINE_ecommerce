@@ -139,6 +139,15 @@ footer {
   color: $offwhite;
   text-align: center;
   display: block;
+	
+	//text-muted color
+	a {
+		color: #868e96;
+	}
+	
+  a:hover {
+  	color: $offwhite;
+  }
 }
 
 .mpLogo {
