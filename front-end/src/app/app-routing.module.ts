@@ -15,6 +15,12 @@ const routes :Routes = [
 	{
 		path: 'items',
 		component: ItemsComponent
+		// children: [
+		// 	{
+		// 		path: 'items/category',
+		// 		component: ItemsComponent
+		// 	}
+		// ]
 	},
 	{
 		path: 'about',

@@ -1,28 +1,26 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 
-import { LogInComponent } from './log-in.component';
+import { ProfileComponent } from './profile.component';
 
-import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { UserService } from '../user.service';
 
-describe('LogInComponent', () => {
-  let component: LogInComponent;
-  let fixture: ComponentFixture<LogInComponent>;
+describe('ProfileComponent', () => {
+  let component: ProfileComponent;
+  let fixture: ComponentFixture<ProfileComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LogInComponent ],
-      imports: [ FormsModule, HttpModule, RouterTestingModule ],
+      declarations: [ ProfileComponent ],
+      imports: [ HttpModule ],
       providers: [ UserService ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LogInComponent);
+    fixture = TestBed.createComponent(ProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

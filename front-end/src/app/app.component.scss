@@ -19,6 +19,7 @@ $offwhite: #f7f7f5;
 
 .dropdown-menu.show {
   background-color: $grey;
+  margin-top: -5vh;
   padding: 1rem;
 }
 
@@ -139,9 +140,10 @@ footer {
   color: $offwhite;
   text-align: center;
   display: block;
-	
+
 	//text-muted color
 	a {
+		transition: all 1s ease;
 		color: #868e96;
 	}
 	
