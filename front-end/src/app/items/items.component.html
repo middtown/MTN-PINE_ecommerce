@@ -1,15 +1,16 @@
 <div class="container-fluid">
-	<app-item-detail [item]="selectedItem"></app-item-detail>
+	<div class="bg-container">
+		<app-item-detail [item]="selectedItem"></app-item-detail>
 
-	<div class="row text-center">
-		<div class="col col-6 col-lg-4" 
-			*ngFor="let item of items"
-			(click)="onSelect(item)">
+		<div class="row align-items-center">
+			<div class="col col-6 col-lg-4" 
+				*ngFor="let item of items"
+				(click)="onSelect(item)">
 
-			<h1>{{item.name}}</h1>
-			<img src="assets/products/bifold2.jpg" alt="Bifold Wallet">
+				<h1>{{item.name}}</h1>
+				<img src="assets/products/{{item.id}}.jpg" alt="Bifold Wallet">
+			</div>
 		</div>
-	</div>
 </div>
 	
 

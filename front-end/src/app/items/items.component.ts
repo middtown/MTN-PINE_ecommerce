@@ -13,24 +13,29 @@ export class ItemsComponent implements OnInit {
 
   selectedItem :number;
 
-  onSelect(item :number): void {
-      this.selectedItem = item;
-      window.scrollTo(0, 0);
-    }
-
-	addToCart(id) {
-		console.log(id);
-	}
-
-  getItems() {
-    this.itemService.getItems()
-    .subscribe((items)=> this.items = items);
+  onSelect(item :number) :void{
+    this.selectedItem = item;
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   constructor(private itemService :ItemService) { }
 
   ngOnInit() {
-    this.getItems();
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+    
+    this.itemService.getItems()
+    .subscribe((res)=> {
+      console.log(res.json());
+      this.items = res.json();
+    });
   }
 
 }

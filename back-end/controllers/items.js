@@ -31,11 +31,18 @@ const itemsById = (req, res) => {
 
 // SELECT * FROM post WHERE category = itemClicked
 const itemsByCategory = (req, res) => {
-	console.log(req.params);
-	// Item.findOne({ where: {category: req.params.body} }).then ( aCategory => {
-	// 	res.json(aCategory);
-	// });
+	console.log(req.params.cat);
+	// res.send(req.params.cat);
+	Item.findOne({ where: {category: req.params.cat} }).then ( aCategory => {
+		res.json(aCategory);
+	});
 };
+
+const allItemsByCategory = (req, res)=> {
+	Item.findAll().then(items => {
+		res.json(items);
+	});
+}
 
 
 //Put the app.get part below any back end routes, because it creates a route that defaults 
@@ -49,5 +56,6 @@ module.exports = {
 	items 			: getItems,
 	oneItem 		: itemsById,
 	category 		: itemsByCategory,
+	categoryAll : allItemsByCategory,
 	default 		: frontEnd
 };

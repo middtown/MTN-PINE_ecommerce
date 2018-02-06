@@ -16,12 +16,20 @@ $offwhite: #f7f7f5;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -142px;
+  margin-top: -6vh;
   position: relative;
-  // padding-top: 8vh;
+  z-index: -5;
 }
 
 .header {
   color: $offwhite;
 
 }
+
+
+@media only screen
+	and (max-device-width: 768px) {
+      .home-bg {
+        margin-top: -13vh;
+      }
+	}

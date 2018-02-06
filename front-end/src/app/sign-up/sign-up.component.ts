@@ -9,8 +9,6 @@ import { UserService } from '../user.service';
 })
 export class SignUpComponent implements OnInit {
 
-	baseUrl = 'http://localhost:3000';
-	 
 	newUser = <any>{};
 
 	onNewUser(newUser) {
@@ -19,9 +17,7 @@ export class SignUpComponent implements OnInit {
 		.subscribe((response)=> {
 			let user = response.json();
 			console.log(user);
-			// TODO - change navigate location, display login success using either:
-				// - home page with currentUser displayed, login/signup hidden
-				// - go to items or profile page with success flash message
+			this.userService.currentUser = user;
 			this.router.navigate(["/items"]);
 		});
 	}

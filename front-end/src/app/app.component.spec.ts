@@ -2,15 +2,25 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
+import { CartComponent } from './cart/cart.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { ProfileComponent } from './profile/profile.component';
+
+import { ItemService } from './item.service';
+import { CartService } from './cart.service';
+import { UserService } from './user.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, CartComponent, SignUpComponent, LogInComponent, ProfileComponent
       ],
-      imports: [ RouterTestingModule, FormsModule ]
+      imports: [ RouterTestingModule, FormsModule, HttpModule ],
+      providers: [ ItemService, CartService, UserService ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

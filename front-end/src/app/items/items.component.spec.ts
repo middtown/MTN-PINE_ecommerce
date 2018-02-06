@@ -1,8 +1,12 @@
 import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
+import { HttpModule } from '@angular/http';
+
 import { ItemDetailComponent } from '../item-detail/item-detail.component';
 import { ItemsComponent } from './items.component';
+
 import { ItemService } from '../item.service';
+import { CartService } from '../cart.service';
 
 describe('ItemsComponent', () => {
   let component: ItemsComponent;
@@ -12,7 +16,8 @@ describe('ItemsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ItemsComponent, ItemDetailComponent ],
-      providers: [ ItemService ]
+      imports: [ HttpModule ],
+      providers: [ ItemService, CartService ]
     })
     .compileComponents();
   }));
@@ -38,12 +43,11 @@ describe('ItemsComponent', () => {
       component.onSelect(0);
       expect(component.selectedItem).toBe(0);
     });
-  });
 
-  // getItems()
-  describe('getItems()', ()=> {
-    it(`should be called onInit, items should populate automatically`, ()=> {
-      expect(component.items).toBeTruthy();
+    it('should be able to select a random item', ()=> {
+      let num = Math.floor(Math.random() * 6);
+      component.onSelect(num);
+      expect(component.selectedItem).toBe(num);
     });
   });
 });
