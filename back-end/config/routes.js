@@ -38,6 +38,11 @@ router.delete('/api/profile/address/:id', usersController.deleteAddress);
 
 
 
+									// --------------------  passport Routes. -------------------- //
+
+// passpo routes
+
+
 									// --------------------  End Key Routes. -------------------- //
 
 //Put the app.get part below any back end routes, because it creates a route that defaults 
