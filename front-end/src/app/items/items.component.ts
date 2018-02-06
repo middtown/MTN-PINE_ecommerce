@@ -13,14 +13,14 @@ export class ItemsComponent implements OnInit {
 
   selectedItem :number;
 
-  onSelect(item :number): void {
-      this.selectedItem = item;
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-    }
+  onSelect(item :number) :void{
+    this.selectedItem = item;
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 
   constructor(private itemService :ItemService) { }
 
@@ -32,9 +32,9 @@ export class ItemsComponent implements OnInit {
     });
     
     this.itemService.getItems()
-    .subscribe((res) => {
+    .subscribe((res)=> {
       console.log(res.json());
-      this.items = res.json()
+      this.items = res.json();
     });
   }
 
