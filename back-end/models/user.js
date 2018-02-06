@@ -1,13 +1,16 @@
-module.exports = function(sequelize, Sequelize){
+module.exports = (sequelize, Sequelize) => {
 
-  let model = sequelize.define("User", {
-	    name: Sequelize.STRING, 
-	    email: Sequelize.STRING,
-	    password: Sequelize.STRING, 
+
+
+  let User = sequelize.define("User", {
+	    name: { type: Sequelize.STRING, unique: true, required: true, trim: true}, 
+	    email: { type: Sequelize.STRING, unique: true, required: true, trim: true, email: true},
+	    password: {type: Sequelize.STRING, unique: true, required: true, password: true}, 
 	    shippingAddress_id: Sequelize.INTEGER,
 	    order_id: Sequelize.INTEGER
   });
   
-  return model;
-};
 
+
+  return User;
+};

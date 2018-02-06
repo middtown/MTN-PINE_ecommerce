@@ -14,6 +14,7 @@ router.get('/api', (req, res) => {
 									// --------------------   Item Routes. -------------------- //
 
 // index
+router.get('/api/home', itemsController.home); 
 router.get('/api/items', itemsController.items); 
 router.get('/api/items/:id', itemsController.oneItem);
 router.get('/api/items/category', itemsController.category);
@@ -22,10 +23,18 @@ router.get('/api/items/category', itemsController.category);
 
 // Get all users 
 router.get('/api/profile', usersController.user);
-// Create User
-router.post('/api/profile/new', usersController.createUser);
+// log in user with passport
+router.post('/api/login', usersController.logIn);
+// log out user with passport
+router.post('/api/logout', usersController.logOut);
+// Create User with passport 
+router.post('/api/profile/new', usersController.signUp);
+
+// // Create User
+// router.post('/api/profile/new', usersController.createUser);
 
 								// --------------------  User Address Routes. -------------------- //
+
 
 // Shipping Addresses Routes
 router.get('/api/profile/address', usersController.addresses);

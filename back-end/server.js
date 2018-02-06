@@ -4,7 +4,11 @@ const Sequelize = require('sequelize');
 const express = require('express');
 const app = express();
 const path = require('path');
+const session = require('express-session');
+const passport = require('passport');
+const flash = require('flash');
 const morgan = require('morgan');
+app.use(morgan('dev')); //log every request to the console
 const cookieParser = require("cookie-parser");
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -16,6 +20,19 @@ app.use(express.static(__dirname + '/dist'));
 const mtnpineRouter = require('./config/routes.js');
 app.use(mtnpineRouter);
 
+// initialize passport stuff -- For Passport
+app.use(session({ secret: 'mtnpinedabest',resave: true, saveUninitialized:true})); // session secret
+app.use(passport.initialize()); 
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); 
+
+
+//Models
+let models = require("./models");
+ 
+//load passport strategies
+require('./config/passport.js')(passport, models.user);
+
 //CORS setup to allow other ports from this host
 if(!process.env.DYNO) {
 	app.use( (req, res, next) => {
@@ -25,6 +42,11 @@ if(!process.env.DYNO) {
 	  next();
 	});
 }
+
+app.use((req, res, next) => {
+	res.locals.currentUser = req.user;
+	next();
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

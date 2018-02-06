@@ -9,6 +9,11 @@ const User = db.models.User;
 const Address = db.models.Address;
 const path = require('path');
 
+// home route after sign in
+const home = (req, res) => {
+	res.send("<h1> You are at the home route </h1>");
+};
+
 
 // Find all items in the items table
 const getItems = (req, res) => {
@@ -40,6 +45,7 @@ const frontEnd = (req, res) => {
 };
 
 module.exports = {
+	home 			: home,
 	items 			: getItems,
 	oneItem 		: itemsById,
 	category 		: itemsByCategory,
