@@ -22,15 +22,6 @@ export class ItemsComponent implements OnInit {
       });
     }
 
-	addToCart(id) {
-		console.log(id);
-	}
-
-  getItems() {
-    this.itemService.getItems()
-    .subscribe((items)=> this.items = items);
-  }
-
   constructor(private itemService :ItemService) { }
 
   ngOnInit() {
@@ -39,7 +30,12 @@ export class ItemsComponent implements OnInit {
       left: 0,
       behavior: 'smooth'
     });
-    this.getItems();
+    
+    this.itemService.getItems()
+    .subscribe((res) => {
+      console.log(res.json());
+      this.items = res.json()
+    });
   }
 
 }
