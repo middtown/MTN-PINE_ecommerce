@@ -16,7 +16,7 @@ describe('ItemService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('should return items', inject([ItemService], (service: ItemService) => {
+  it('should return items after calling', inject([ItemService], (service: ItemService) => {
     expect(service.getItems()).toBeTruthy();
   }));
 });
