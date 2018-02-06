@@ -1,31 +1,25 @@
 
   <nav class="navbar site-header sticky-top py-1 navbar-trans .navbar-expand-lg ">
-    <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center .navbar-toggler">
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-      <div class="d-flex dropdown py-2 d-none d-md-inline-block align-items-center row">
+    <div class="container d-flex p-2 justify-content-center  .navbar-toggler">
 
+      <div class="d-flex dropdown py-2 d-none d-md-inline-block align-items-center row justify-content-center">
 
         <div class="d-flex flex-col  d-md-inline-block">
-          <a  data-toggle="dropdown" class="dropdown-toggle d-flex py-2 d-none d-md-inline-block align-items-center nav justify-content-center">SHOP
-            <!-- <b class="caret"></b> -->
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a routerLink="/items">WALLETS</a>
-            </li>
-            <li>
-              <a href="#">BAGS</a>
-            </li>
-            <li>
-              <a href="#">ACCESSORIES</a>
-            </li>
-            <li>
-              <a href="#">Dropdown item 4</a>
-            </li>
-          </ul>
+          <a  data-toggle="dropdown" class="dropdown-toggle d-flex py-2 d-none d-md-inline-block align-items-center nav justify-content-center">SHOP</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a routerLink="/items">WALLETS</a>
+              </li>
+              <li>
+                <a href="#">BAGS</a>
+              </li>
+              <li>
+                <a href="#">ACCESSORIES</a>
+              </li>
+              <li>
+                <a href="#">Dropdown item 4</a>
+              </li>
+            </ul>
         </div>
 
         <div class="d-flex flex-col  d-md-inline-block">
@@ -34,16 +28,31 @@
 
         <div class="d-flex flex-col  d-md-inline-block">
           <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav justify-content-center" routerLink="/about">ABOUT</a>
-          <!-- <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav" routerLink="/contact">CONTACT</a> -->
         </div>
       </div>
-      <!-- <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a> -->
-      <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">Cart</button>
-    </div>
+
+      <!-- <div class="float-right">
+        <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">Cart</button>
+      </div> -->
+
+    <!-- </div> -->
+
     <!-- <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a>
     </div> -->
+    <div class="container float-right cart">
+      <div class="float-right">
+      <button type="button" class="btn btn-default person" data-toggle="modal" data-target="#modalLogin">
+        <i class="fas fa-user"></i>
+      </button>
+      <button type="button" class="btn btn-default person" data-toggle="modal" data-target="#modalCart">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
 
+
+      </div>
+    </div>
+</div>
 
   </nav>
 
@@ -53,8 +62,8 @@
   <router-outlet></router-outlet>
 
 
-  <!-- Modal -->
-  <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <!-- Login Modal -->
+  <div class="modal right fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
 
@@ -62,16 +71,15 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="modal-title" id="myModalLabel2">Cart</h4>
+          <h4 class="modal-title" id="modalLogin"></h4>
         </div>
 
         <div class="modal-body">
-          <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-            labore sustainable VHS.
+
+          <app-log-in></app-log-in>
+          <hr>
+          <p>Need an account?
+            <a data-dismiss="modal" data-toggle="modal" data-target="#modalSignUp">Sign Up</a>
           </p>
         </div>
 
@@ -80,7 +88,60 @@
     </div>
     <!-- modal-dialog -->
   </div>
-  <!-- modal -->
+  <!-- Login modal -->
+
+  <!-- Sign Up Modal -->
+  <div class="modal right fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUp">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="modalSignUp"></h4>
+        </div>
+
+        <div class="modal-body">
+
+          <app-sign-up></app-sign-up>
+          <hr>
+          <p>Already have an account?
+            <a data-dismiss="modal" data-toggle="modal" data-target="#modalLogin">Login</a>
+          </p>
+        </div>
+
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- Sign U[ modal -->
+
+  <!-- Cart Modal -->
+  <div class="modal right fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="modalCart">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="modalCart"></h4>
+        </div>
+
+        <div class="modal-body">
+
+          <app-cart></app-cart>
+
+        </div>
+
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- Cart modal -->
 
   <footer class="py-5">
 
@@ -89,7 +150,7 @@
     <div class="row">
 
       <div class="col-6 col-md">
-        <h5>Follow Us</h5>
+        <h5>Follow</h5>
         <ul class="list-unstyled text-small">
           <li>
             <a class="text-muted" href="https://www.instagram.com/mtnpine/">Instagram</a>
@@ -101,10 +162,13 @@
       </div>
 
       <div class="col-6 col-md">
-        <h5>Contact Us</h5>
+        <h5>Contact</h5>
         <ul class="list-unstyled text-small">
           <li>
             <a class="text-muted" routerLink="/contact">Email</a>
+          </li>
+          <li>
+            <a class="text-muted" routerLink="/aboutus">Devs</a>
           </li>
         </ul>
       </div>

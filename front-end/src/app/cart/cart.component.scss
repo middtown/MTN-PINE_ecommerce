@@ -1,8 +1,11 @@
-div {
-	background: green;
-	position: absolute;
-	right: 0;
+.container-fluid {
+  padding: 1vh 1vw;
 }
-h1 {
-	color: white;
+.container {
+	background-color: rgba(247, 247, 245, .5);
+	padding: 0 1vw;
+
+	h2 {
+		padding: 1vh 0;
+	}
 }

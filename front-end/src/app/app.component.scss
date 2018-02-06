@@ -14,6 +14,7 @@ $offwhite: #f7f7f5;
 
 .nav {
   margin: 0 20px;
+  width: 100%;
 }
 
 .dropdown-menu.show {
@@ -35,47 +36,21 @@ $offwhite: #f7f7f5;
   color: #fff;
   text-decoration: none;
 }
+// .container {
+//   width: 100%;
+// }
+.cart{
+  margin-top: -120px;
+  // z-index: -5;
+}
+.person {
+  color: $offwhite;
+  background: transparent;
+}
 
 /////////////
 // sidebar //
 /////////////
-
-/*
- * Extra utilities
- */
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-
-
-////////////
-// Footer //
-////////////
-
-footer {
-  background-image: url('/assets/topogreen.jpg');
-  background-size: contain;
-  max-width: 100%;
-  color: $offwhite;
-  text-align: center;
-  display: block;
-}
-
-.mpLogo {
-  height: 30px;
-
-}
-
-
-
-
-
 
 .modal.left .modal-dialog,
 	.modal.right .modal-dialog {
@@ -121,6 +96,39 @@ footer {
 	}
 
 	.modal-header {
-		border-bottom-color: #EEEEEE;
-		background-color: #FAFAFA;
+		border-bottom-color: $green;
+		background-color: $offwhite;
 	}
+
+
+/*
+ * Extra utilities
+ */
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+////////////
+// Footer //
+////////////
+
+footer {
+  background-image: url('/assets/topogreen.jpg');
+  background-size: contain;
+  max-width: 100%;
+  color: $offwhite;
+  text-align: center;
+  display: block;
+}
+
+.mpLogo {
+  height: 30px;
+
+}
