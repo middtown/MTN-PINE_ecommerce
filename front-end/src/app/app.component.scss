@@ -28,9 +28,8 @@ nav {
 }
 
 .dropdown-menu.show {
-  background-color: $grey;
-  margin-top: -5vh;
-  padding: 1rem;
+  background-color: $offwhite;
+  margin-top: 2vh;
 }
 
 .dropdown-toggle::after {
@@ -41,11 +40,13 @@ nav {
 .site-header a {
   transition: ease-in-out color .15s;
   color: $green;
+  margin: 0 20px;
   // height: 70px;
 }
-.site-header a:hover {
-  color: #657e65;
+.site-header .nav-center a:hover {
+  color: $offwhite;
   text-decoration: none;
+  background-color: $green;
 }
 // .container {
 //   width: 100%;
@@ -58,9 +59,7 @@ nav {
   color: $green;
   background: transparent;
 }
-.person a:hover {
-  color:#657e65;
-}
+
 
 /////////////
 // sidebar //
@@ -113,7 +112,11 @@ nav {
 		border-bottom-color: $green;
     background-color: $offwhite;
     height: 76px;
-	}
+  }
+
+  .modal-body {
+    background-color: $offwhite;
+  }
 
 
 /*
@@ -154,7 +157,6 @@ footer {
 
 	//text-muted color
 	a {
-		transition: all 1s ease;
 		color: #868e96;
 	}
 
