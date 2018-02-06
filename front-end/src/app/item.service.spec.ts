@@ -12,4 +12,9 @@ describe('ItemService', () => {
   it('should be created', inject([ItemService], (service: ItemService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should return items', inject([ItemService], (service: ItemService) => {
+  	console.log(service.getItems());
+    expect(service.getItems()).toBeTruthy();
+  }));
 });
