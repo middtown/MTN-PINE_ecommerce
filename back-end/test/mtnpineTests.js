@@ -11,17 +11,17 @@ let sequelize = new Sequelize(process.env.DATABASE_URL || localHost.aaron || loc
 
 describe('#createUser()', () => {
 
-    it('should save without error', done => {
-        User.create({     
-          name: 'Hendricks',
-          email:'someemail@gmail.com',
-          password: 'somepassword'
-        }).then( newUser => {
-          expect(newUser.name).to.equal('Hendricks');
-          console.log(newUser);
-          done();
-        });
-    });
+		it('should save without error', done => {
+				User.create({			
+					name: 'Hendricks',
+					email:'someemail@gmail.com',
+					password: 'somepassword'
+				}).then( newUser => {
+					expect(newUser.name).to.equal('Hendricks');
+					console.log(newUser);
+					done();
+				});
+		});
 
 });
-          
+					

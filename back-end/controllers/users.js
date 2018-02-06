@@ -19,9 +19,11 @@ const getUserProfile = (req, res) => {
 
 // Create User
 const createUser = (req, res) => {
+	console.log(req.body);
+	console.log("create user has been hit");
 	User.create({
 		name: req.body.name,
-		email: req.body.emal,
+		email: req.body.email,
 		password: req.body.password
 	}).then(user => {
 		res.json(user);
