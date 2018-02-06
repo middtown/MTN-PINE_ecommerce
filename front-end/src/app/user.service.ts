@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpModule, Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class UserService {
@@ -20,6 +22,7 @@ export class UserService {
 		console.log(user);
 		// validate?
 		this.currentUser = user;
+		return of(user);
 	}
 
 	getUser() {
