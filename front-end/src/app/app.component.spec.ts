@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { CartComponent } from './cart/cart.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { ProfileComponent } from './profile/profile.component';
 
 import { ItemService } from './item.service';
 import { CartService } from './cart.service';
@@ -16,7 +17,7 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent, CartComponent, SignUpComponent, LogInComponent
+        AppComponent, CartComponent, SignUpComponent, LogInComponent, ProfileComponent
       ],
       imports: [ RouterTestingModule, FormsModule, HttpModule ],
       providers: [ ItemService, CartService, UserService ]

@@ -11,7 +11,7 @@ export class CartService {
 		return of(this.cart);
 	}
 
-	addToCart(id) {
+	addToCart(id) :void{
 		this.cart.push(id);
 		console.log(this.cart);
 	}

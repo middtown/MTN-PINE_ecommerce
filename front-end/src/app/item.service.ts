@@ -13,7 +13,6 @@ export class ItemService {
 	// baseUrl = 'https://mtnpine.herokuapp.com';
 
 	getItems() {
-		// return of(ITEMS);
 		return (this.http.get(`${this.baseUrl}/api/items`));
 	}
 
