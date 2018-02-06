@@ -28,7 +28,8 @@ nav {
 }
 
 .dropdown-menu.show {
-  background-color: $offwhite;
+  background-color: $grey;
+  margin-top: -5vh;
   padding: 1rem;
 }
 
@@ -153,6 +154,7 @@ footer {
 
 	//text-muted color
 	a {
+		transition: all 1s ease;
 		color: #868e96;
 	}
 
