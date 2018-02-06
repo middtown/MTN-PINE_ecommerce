@@ -16,13 +16,13 @@ import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { AboutDevsComponent } from './about-devs/about-devs.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 import { ItemService } from './item.service';
 import { CartService } from './cart.service';
-import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { UserService } from './user.service';
-import { AboutDevsComponent } from './about-devs/about-devs.component';
-import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
