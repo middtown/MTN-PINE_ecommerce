@@ -4,42 +4,14 @@ $offwhite: #f7f7f5;
 
 
 
-
-// .container {
-//   max-width: 960px;
-// }
-
-/*
- * Custom translucent site header
- */
-
-// .site-header {
-//   background-color: rgba(255, 255, 255, 0.124);
-//   -webkit-backdrop-filter: saturate(180%) blur(20px);
-//   backdrop-filter: saturate(180%) blur(20px);
-// }
-.site-header a {
-  color: $offwhite;
-  transition: ease-in-out color .15s;
-  height: 70px;
-  margin-top: 20px;
-}
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-
 ////////////
 // navbar //
 ////////////
 
-// .dropdown-menu {
-//   background-color: rgba(255, 255, 255, 0.124);
-// }
 .logoMain {
   max-height: 50px;
 }
+
 .nav {
   margin: 0 20px;
 }
@@ -53,6 +25,16 @@ $offwhite: #f7f7f5;
   display:none
 }
 
+.site-header a {
+  color: $offwhite;
+  transition: ease-in-out color .15s;
+  height: 70px;
+  margin-top: 20px;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
 
 /////////////
 // sidebar //
@@ -62,48 +44,15 @@ $offwhite: #f7f7f5;
  * Extra utilities
  */
 
-.border-top { border-top: 1px solid #e5e5e5; }
-.border-bottom { border-bottom: 1px solid #e5e5e5; }
-
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-
-.flex-equal > * {
-  -ms-flex: 1;
-  -webkit-box-flex: 1;
-  flex: 1;
-}
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    -ms-flex: 1;
-    -webkit-box-flex: 1;
-    flex: 1;
-  }
+.border-top {
+  border-top: 1px solid #e5e5e5;
 }
 
-.overflow-hidden { overflow: hidden; }
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
 
 
-
-#login-modal {
-  overflow: hidden;
-}
-#login-modal .modal-header h4 {
-  text-transform: uppercase;
-}
-#login-modal form {
-  margin-bottom: 23px;
-}
-#login-modal a {
-  color: #2b90d9;
-}
-#login-modal p {
-  font-weight: 300;
-  margin-bottom: 23px;
-  font-size: 14px;
-}
-.modal-backdrop {
-  z-index: 1035;
-}
 
 ////////////
 // Footer //
@@ -111,4 +60,67 @@ $offwhite: #f7f7f5;
 
 footer {
   background-image: url('/assets/topogreen.jpg');
+  background-size: contain;
+  max-width: 100%;
+  color: $offwhite;
+  text-align: center;
+  display: block;
 }
+
+.mpLogo {
+  height: 30px;
+
+}
+
+
+
+
+
+
+.modal.left .modal-dialog,
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 50vh;
+		height: 100%;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+	}
+
+	.modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	.modal.left .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 80px;
+	}
+
+
+/*Right*/
+	.modal.right.fade .modal-dialog {
+		right: 0px;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+
+	.modal.right.fade.in .modal-dialog {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+		border-bottom-color: #EEEEEE;
+		background-color: #FAFAFA;
+	}
