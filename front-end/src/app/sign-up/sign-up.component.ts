@@ -14,7 +14,7 @@ export class SignUpComponent implements OnInit {
 	newUser = <any>{};
 
 	onNewUser(newUser) {
-		console.log(newUser);
+		//console.log(newUser);
 		this.userService.saveUser(newUser)
 		.subscribe((response)=> {
 			let user = response.json();

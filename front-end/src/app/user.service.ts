@@ -9,6 +9,8 @@ export class UserService {
 	//baseUrl = 'http://mtnpine.herokuapp.com';
 
 	saveUser(newUser) {
+		console.log("from services"); 
+		console.log(newUser);
 		return this.http.post(`${this.baseUrl}/api/profile/new`, newUser);
 	}
 
