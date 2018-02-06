@@ -5,6 +5,11 @@ import { LogInComponent } from '../log-in/log-in.component';
 import { HomeComponent } from './home.component';
 
 import { FormsModule }   from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+
+import { UserService } from '../user.service';
+
+import { HttpModule } from '@angular/http';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -16,7 +21,9 @@ describe('HomeComponent', () => {
         HomeComponent, 
         SignUpComponent,
         LogInComponent
-      ]
+      ],
+      imports: [ FormsModule, RouterTestingModule ,HttpModule ],
+      providers: [ UserService ]
     })
     .compileComponents();
   }));
