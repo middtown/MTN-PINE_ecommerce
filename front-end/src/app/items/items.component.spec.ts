@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { ItemDetailComponent } from '../item-detail/item-detail.component';
 import { ItemsComponent } from './items.component';
 import { ItemService } from '../item.service';
@@ -19,9 +19,5 @@ describe('ItemsComponent', () => {
     fixture = TestBed.createComponent(ItemsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });
