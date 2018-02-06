@@ -3,7 +3,6 @@ $green:#5b665b;
 $offwhite: #f7f7f5;
 
 
-
 ////////////
 // navbar //
 ////////////
@@ -25,6 +24,7 @@ $offwhite: #f7f7f5;
 
 nav {
    background-color: $offwhite;
+   font-family: 'camptonmedium';
 }
 
 .dropdown-menu.show {
@@ -34,13 +34,9 @@ nav {
 }
 
 .dropdown-toggle::after {
-  display:none
+  display:none;
 }
 
-// .row {
-// 	margin-top: 4vh;
-// 	padding: 0;
-// }
 
 .site-header a {
   transition: ease-in-out color .15s;
@@ -48,7 +44,7 @@ nav {
   // height: 70px;
 }
 .site-header a:hover {
-  color: $grey;
+  color: #657e65;
   text-decoration: none;
 }
 // .container {
@@ -61,6 +57,9 @@ nav {
 .person {
   color: $green;
   background: transparent;
+}
+.person a:hover {
+  color:#657e65;
 }
 
 /////////////
