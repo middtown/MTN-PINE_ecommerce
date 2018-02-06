@@ -42,10 +42,10 @@
     </div> -->
     <div class="container float-right cart">
       <div class="float-right">
-      <button type="button" class="btn btn-default person" data-toggle="modal" data-target="#myModal2">
+      <button type="button" class="btn btn-default person" data-toggle="modal" data-target="#modalLogin">
         <i class="fas fa-user"></i>
       </button>
-      <button type="button" class="btn btn-default person" data-toggle="modal" data-target="#myModal2">
+      <button type="button" class="btn btn-default person" data-toggle="modal" data-target="#modalCart">
         <i class="fas fa-shopping-cart"></i>
       </button>
 
@@ -62,8 +62,8 @@
   <router-outlet></router-outlet>
 
 
-  <!-- Modal -->
-  <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <!-- Login Modal -->
+  <div class="modal right fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
 
@@ -71,13 +71,16 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="modal-title" id="myModalLabel2">Cart</h4>
+          <h4 class="modal-title" id="modalLogin"></h4>
         </div>
 
         <div class="modal-body">
-          <app-sign-up></app-sign-up>
 
           <app-log-in></app-log-in>
+          <hr>
+          <p>Need an account?
+            <a data-dismiss="modal" data-toggle="modal" data-target="#modalSignUp">Sign Up</a>
+          </p>
         </div>
 
       </div>
@@ -85,7 +88,60 @@
     </div>
     <!-- modal-dialog -->
   </div>
-  <!-- modal -->
+  <!-- Login modal -->
+
+  <!-- Sign Up Modal -->
+  <div class="modal right fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUp">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="modalSignUp"></h4>
+        </div>
+
+        <div class="modal-body">
+
+          <app-sign-up></app-sign-up>
+          <hr>
+          <p>Already have an account?
+            <a data-dismiss="modal" data-toggle="modal" data-target="#modalLogin">Login</a>
+          </p>
+        </div>
+
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- Sign U[ modal -->
+
+  <!-- Cart Modal -->
+  <div class="modal right fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="modalCart">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="modalCart"></h4>
+        </div>
+
+        <div class="modal-body">
+
+          <app-cart></app-cart>
+
+        </div>
+
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- Cart modal -->
 
   <footer class="py-5">
 
@@ -94,7 +150,7 @@
     <div class="row">
 
       <div class="col-6 col-md">
-        <h5>Follow Us</h5>
+        <h5>Follow</h5>
         <ul class="list-unstyled text-small">
           <li>
             <a class="text-muted" href="https://www.instagram.com/mtnpine/">Instagram</a>
@@ -106,7 +162,7 @@
       </div>
 
       <div class="col-6 col-md">
-        <h5>Contact Us</h5>
+        <h5>Contact</h5>
         <ul class="list-unstyled text-small">
           <li>
             <a class="text-muted" routerLink="/contact">Email</a>
