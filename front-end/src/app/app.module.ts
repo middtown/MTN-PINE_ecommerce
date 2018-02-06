@@ -21,6 +21,7 @@ import { ItemService } from './item.service';
 import { CartService } from './cart.service';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { UserService } from './user.service';
+import { AboutDevsComponent } from './about-devs/about-devs.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { UserService } from './user.service';
     CartComponent,
     ItemDetailComponent,
     SignUpComponent,
-    LogInComponent
+    LogInComponent,
+    AboutDevsComponent
   ],
   imports: [
     BrowserModule,
