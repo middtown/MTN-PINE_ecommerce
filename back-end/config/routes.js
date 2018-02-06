@@ -60,7 +60,8 @@ router.delete('/api/profile/address/:id', usersController.deleteAddress);
 // router.get('/*', itemsController.default);
 
 router.get('/*', (req, res) => {
-	res.sendfile('index.html');
+	res.sendfile('../dist');
 });
+
 module.exports = router;
 

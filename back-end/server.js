@@ -26,7 +26,7 @@ app.use(session({ secret: 'mtnpinedabest',resave: true, saveUninitialized:true})
 app.use(passport.initialize()); 
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); 
-require('./config/routes.js')(config, passport);
+//require('../config/routes.js')(config, passport);
 
 
 //Models

@@ -9,8 +9,8 @@ import { ITEMS } from './items/mock-items';
 @Injectable()
 export class ItemService {
 
-	baseUrl = 'http://localhost:3000';
-	// baseUrl = 'https://mtnpine.herokuapp.com';
+	// baseUrl = 'http://localhost:3000';
+	baseUrl = 'https://mtnpine.herokuapp.com';
 
 	getItems() {
 		return (this.http.get(`${this.baseUrl}/api/items`));
