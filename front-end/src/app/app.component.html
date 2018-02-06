@@ -1,60 +1,44 @@
+<nav class="navbar navbar-expand-md navbar-light sticky-top site-header">
+  <a class="navbar-brand" routerLink="/"><img src="/assets/logoLongGreen.png" alt="logo" class='logoMain'></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <nav class="navbar site-header sticky-top py-1 navbar-trans .navbar-expand-lg ">
-    <div class="container d-flex p-2 justify-content-center  .navbar-toggler">
-
-      <div class="d-flex dropdown py-2 d-none d-md-inline-block align-items-center row justify-content-center">
-
-        <div class="d-flex flex-col  d-md-inline-block">
-          <a  data-toggle="dropdown" class="dropdown-toggle d-flex py-2 d-none d-md-inline-block align-items-center nav justify-content-center">SHOP</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a routerLink="/items">WALLETS</a>
-              </li>
-              <li>
-                <a href="#">BAGS</a>
-              </li>
-              <li>
-                <a href="#">ACCESSORIES</a>
-              </li>
-              <li>
-                <a href="#">Dropdown item 4</a>
-              </li>
-            </ul>
-        </div>
-
-        <div class="d-flex flex-col  d-md-inline-block">
-          <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav navbar-brand justify-content-center" routerLink="/"><img src="/assets/mtnpine_linewhite.png" alt="logo" class='logoMain'></a>
-        </div>
-
-        <div class="d-flex flex-col  d-md-inline-block">
-          <a class="d-flex py-2 d-none d-md-inline-block align-items-center nav justify-content-center" routerLink="/about">ABOUT</a>
-        </div>
-      </div>
-
-      <!-- <div class="float-right">
-        <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">Cart</button>
-      </div> -->
-
-    <!-- </div> -->
-
-    <!-- <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a>
-    </div> -->
-    <div class="container float-right cart">
-      <div class="float-right">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav nav-center mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            SHOP
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">WALLETS</a>
+            <a class="dropdown-item" href="#">BAGS</a>
+            <!-- <div class="dropdown-divider"></div> -->
+            <a class="dropdown-item" href="#">ACC.</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">ABOUT</a>
+        </li>
+      </ul>
+    <ul class="navbar-nav mt-2 mt-lg-0">
       <button type="button" class="btn btn-default person" data-toggle="modal" data-target="#modalLogin">
-        <i class="fas fa-user"></i>
+        <i class="nav-icon fas fa-user"></i>
       </button>
       <button type="button" class="btn btn-default person" data-toggle="modal" data-target="#modalCart">
-        <i class="fas fa-shopping-cart"></i>
+        <i class="nav-icon fas fa-shopping-cart"></i>
       </button>
+    </ul>
+  </div>
+</nav>
 
-
-      </div>
-    </div>
-</div>
-
-  </nav>
 
 
 <router-outlet></router-outlet>
@@ -141,7 +125,7 @@
   </div>
   <!-- Cart modal -->
 
-  <footer class="py-5">
+  <footer id="footer" class="py-5">
 
   <img class="mpLogo" src="/assets/mp.png" alt="logo">
 
