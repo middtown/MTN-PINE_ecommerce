@@ -1,0 +1,12 @@
+<div class="container">
+	
+	
+
+	<div *ngIf="currentUser">
+		<h2>{{(currentUser[0]?.name)}}</h2>
+		<ul>
+			<li>Shipping Address id: {{(currentUser[0]?.shippingAddress_id)}}</li>
+		</ul>
+	</div>
+
+</div>

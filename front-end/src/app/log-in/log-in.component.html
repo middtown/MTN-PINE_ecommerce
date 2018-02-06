@@ -3,12 +3,12 @@
 
     <h2>Log In</h2>
 
-    <form>
+    <form (ngSubmit)="onLogIn(thisUser)" #logInForm="ngForm">
       <div class="form-group">
-        <input type="email" class="form-control" name="email" placeholder="Email">
+        <input type="email" class="form-control" name="email" placeholder="Email" [(ngModel)]="thisUser.email" #email="ngModel" required>
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" name="password" placeholder="Password">
+        <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="thisUser.password" #password="ngModel" required>
       </div>
       <div class="form-group">
         <input type="submit" class="btn btn-lg btn-primary">

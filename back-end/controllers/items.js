@@ -27,9 +27,10 @@ const itemsById = (req, res) => {
 // SELECT * FROM post WHERE category = itemClicked
 const itemsByCategory = (req, res) => {
 	console.log(req.params.cat);
-	// Item.findOne({ where: {category: req.params.body} }).then ( aCategory => {
-	// 	res.json(aCategory);
-	// });
+	// res.send(req.params.cat);
+	Item.findOne({ where: {category: req.params.cat} }).then ( aCategory => {
+		res.json(aCategory);
+	});
 };
 
 const allItemsByCategory = (req, res)=> {

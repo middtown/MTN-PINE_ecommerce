@@ -45,7 +45,7 @@ router.delete('/api/profile/address/:id', usersController.deleteAddress);
 //to the front end if no back end routes exist (by serving up the Angular index.html file).
 // router.get('/*', itemsController.default);
 
-router.get('*', (req, res) => {
+router.get('/*', (req, res) => {
 	res.sendfile('index.html');
 });
 module.exports = router;
