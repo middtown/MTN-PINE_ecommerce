@@ -11,9 +11,9 @@ export class ItemsComponent implements OnInit {
 
 	items :Item[];
 
-  selectedItem :Item;
+  selectedItem :number;
 
-  onSelect(item :Item): void {
+  onSelect(item :number): void {
       this.selectedItem = item;
       window.scrollTo(0, 0);
     }

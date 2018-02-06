@@ -1,5 +1,14 @@
 # MTN-PINE
 
+README has (or links to): - Elevator Pitch
+- Wireframes
+- Trello board
+- Heroku
+- Research findings
+- Technologies used
+- Plans for future
+- Contributors
+
 A means of inspiration for adventure and a vessel for a story. 
 
 ## Development
@@ -11,8 +20,6 @@ Please check out the site at [MTN PINE](https://trello.com/mtnpine) to check out
 ### Wireframes
 
 ![wireframes]()
-![wireframes]()
-
 
 ### Getting Started
 
