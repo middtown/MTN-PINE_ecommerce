@@ -39,14 +39,14 @@ $offwhite: #f7f7f5;
   width: 100%;
   display: table-cell;
 }
-
 .cart{
   position: absolute;
   margin-top: -2px;
+  z-index: -5;
 }
-
 .person {
   color: $offwhite;
+  background: transparent;
 }
 
 /////////////
