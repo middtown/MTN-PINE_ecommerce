@@ -2,18 +2,6 @@ $grey:#6a6a6a;
 $green:#5b665b;
 $offwhite: #f7f7f5;
 
-@font-face {
-    font-family: 'camptonextrabold';
-    src: url('/assets/fonts/rene_bieder_-_campton_extrabold-webfont.woff2') format('woff2'),
-         url('/assets/fonts/rene_bieder_-_campton_extrabold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-body {
-  font-family: 'camptonextrabold';
-}
 
 ////////////
 // navbar //
@@ -36,6 +24,7 @@ body {
 
 nav {
    background-color: $offwhite;
+   font-family: 'camptonmedium';
 }
 
 .dropdown-menu.show {
@@ -54,7 +43,7 @@ nav {
   // height: 70px;
 }
 .site-header a:hover {
-  color: $grey;
+  color: #657e65;
   text-decoration: none;
 }
 // .container {
@@ -67,6 +56,9 @@ nav {
 .person {
   color: $green;
   background: transparent;
+}
+.person a:hover {
+  color:#657e65;
 }
 
 /////////////
