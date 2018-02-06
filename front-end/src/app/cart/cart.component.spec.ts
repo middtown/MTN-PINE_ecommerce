@@ -25,7 +25,7 @@ describe('CartComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create itself... (are you running the server?)', () => {
     expect(component).toBeTruthy();
   });
 });

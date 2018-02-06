@@ -12,7 +12,15 @@ export class CartComponent implements OnInit {
 
 	items :Item[];
 
-	cart = <any>[];
+	cart :Item[];
+
+  removeItem(id) {
+    this.cartService.removeFromCart(id)
+    .subscribe((res)=> {
+      console.log(res);
+      this.cart = res;
+    });
+  }
 
   constructor(
   	private cartService :CartService,
@@ -22,6 +30,7 @@ export class CartComponent implements OnInit {
   ngOnInit() {
   	this.cartService.getCart()
   	.subscribe((res)=> {
+      console.log('cart.component.ngOnInit');
   		console.log(res);
   		this.cart = res;
   	});
