@@ -14,6 +14,7 @@ $offwhite: #f7f7f5;
 
 .nav {
   margin: 0 20px;
+  width: 100%;
 }
 
 .dropdown-menu.show {
@@ -35,14 +36,12 @@ $offwhite: #f7f7f5;
   color: #fff;
   text-decoration: none;
 }
-.container {
-  width: 100%;
-  display: table-cell;
-}
+// .container {
+//   width: 100%;
+// }
 .cart{
-  position: absolute;
-  margin-top: -2px;
-  z-index: -5;
+  margin-top: -120px;
+  // z-index: -5;
 }
 .person {
   color: $offwhite;
