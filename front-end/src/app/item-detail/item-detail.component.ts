@@ -12,9 +12,9 @@ export class ItemDetailComponent implements OnInit {
 	@Input() item :Item;
 
 
-	addToCart(id) {
-		console.log(id);
-		this.cartService.addToCart(id);
+	addToCart(item) {
+		console.log(item);
+		this.cartService.addToCart(item);
 	}
 
   constructor(private cartService :CartService) { }
