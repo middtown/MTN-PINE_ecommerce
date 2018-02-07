@@ -12,14 +12,19 @@ export class SignUpComponent implements OnInit {
 	newUser = <any>{};
 
 	onNewUser(newUser) {
-		//console.log(newUser);
-		this.userService.saveUser(newUser)
-		.subscribe((response)=> {
-			let user = response.json();
-			console.log(user);
-			this.userService.currentUser = user;
-			this.router.navigate(["/items"]);
-		});
+		if(newUser.name && newUser.email && newUser.password && (newUser.password == newUser.verifyPassword)) {
+			this.userService.saveUser(newUser)
+			.subscribe((response)=> {
+				let user = response.json();
+				console.log('newUser');
+				console.log(response);
+				console.log(user);
+				this.userService.currentUser = user;
+				this.router.navigate(["/items"]);
+			});
+		} else {
+			newUser.name = "Please enter all correct info.";
+		}
 	}
 
   constructor(

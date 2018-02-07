@@ -1,9 +1,10 @@
 # MTN-PINE
 
+[MTN PINE, hosted on Heroku](https://mtnpine.herokuapp.com)
+
+## Ecommerce
+
 README has (or links to): - Elevator Pitch
-- Wireframes
-- Trello board
-- Heroku
 - Research findings
 - Technologies used
 - Plans for future
@@ -13,15 +14,31 @@ A means of inspiration for adventure and a vessel for a story.
 
 ## Development
 
-What was our [inspiration and ideas](https://trello.com/mtnpine) .
+[Trello Boards](https://trello.com/mtnpine)
 
-Please check out the site at [MTN PINE](https://trello.com/mtnpine) to check out the site. 
-
-### Wireframes
-
-![wireframes]()
+[Wireframes](#)
 
 ### Getting Started
+
+## User Research
+
+Question 1: 
+What do you look for in an online store?
+
+ - User 1: "Easy to find products, easy navigation, simplicity"
+ - User 2: "Well written descriptions on items, as much info as I can get since I am not purchasing it in person.  Plenty of pictures"
+
+What are things that would turn you away from buying from an online store? 
+
+- User 1: "Sketchy set up/old design"
+- User 2: "When a store is too confusing and hard to navigate to find what I want"
+
+What are some of your favorite online stores? 
+
+ - User 1: https://arcteryx.com/, https://topodesigns.com/
+ - User 2: https://www.target.com, https://www.jcrew.com, https://www.anthropologie.com/
+
+
 
 Brainstorming session produced...
 ![Brainstorming Round One](brainstorming.JPG)
@@ -37,27 +54,3 @@ Brainstorming session produced...
 # Project Info
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

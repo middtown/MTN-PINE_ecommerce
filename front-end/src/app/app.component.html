@@ -7,25 +7,28 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav nav-center mt-2 mt-lg-0">
-        <li class="nav-item active">
+        <!-- <li class="nav-item active">
           <a class="nav-link" href="#">
             <span class="sr-only">(current)</span>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             SHOP
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">WALLETS</a>
-            <a class="dropdown-item" href="#">BAGS</a>
+            <a class="dropdown-item" routerLink="/items">WALLETS</a>
+            <a class="dropdown-item" routerLink="/items">BAGS</a>
             <!-- <div class="dropdown-divider"></div> -->
-            <a class="dropdown-item" href="#">ACC.</a>
+            <a class="dropdown-item" routerLink="/items">ACC.</a>
           </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">CONTACT</a>
         </li>
       </ul>
     <ul class="navbar-nav mt-2 mt-lg-0">
@@ -53,7 +56,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="modal-title" id="modalLogin"></h4>
+          <h4 class="modal-title" id="modalLogin">LOGIN</h4>
         </div>
 
         <div class="modal-body">
@@ -63,9 +66,9 @@
           <p>Need an account?
             <a data-dismiss="modal" data-toggle="modal" data-target="#modalSignUp">Sign Up</a>
           </p>
-          
+
           <!-- display current user, can be relocated -->
-          <app-profile></app-profile>
+          <!-- <app-profile></app-profile> -->
 
         </div>
 
@@ -85,7 +88,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="modal-title" id="modalSignUp"></h4>
+          <h4 class="modal-title" id="modalSignUp">SIGN UP</h4>
         </div>
 
         <div class="modal-body">
@@ -113,7 +116,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="modal-title" id="modalCart"></h4>
+          <h4 class="modal-title" id="modalCart">CART</h4>
         </div>
 
         <div class="modal-body">
@@ -129,9 +132,9 @@
   </div>
   <!-- Cart modal -->
 
-  <footer id="footer" class="py-5">
+  <footer id="footer" class="py-2">
 
-  <img class="mpLogo" src="/assets/mp.png" alt="logo">
+  <img class="mpLogo" src="/assets/logoWhite.png" alt="logo">
 
     <div class="container-fluid row">
 

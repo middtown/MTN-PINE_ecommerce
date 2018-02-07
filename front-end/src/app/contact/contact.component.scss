@@ -1,8 +1,67 @@
-form {
-	margin: 1px;
+$grey:#6a6a6a;
+$green:#5b665b;
+$offwhite: #f7f7f5;
+
+p {
+  font-family: 'camptonlight';
+  text-align: center;
+  margin: 0 auto;
 }
-input {
-	margin: 1vh auto;
+
+.bold{
+  font-family: 'camptonmedium';
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-bg {
+  background-image: url('/assets/cabin.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -10vh;
+  position: relative;
+}
+.header {
+  color: $offwhite;
+  font-family: 'camptonthin';
+  text-align: center;
+  font-size: 50px;
+}
+
+ .btn-green {
+   font-family: 'camptonbook';
+   border-radius: 0;
+   background-color: $green;
+   color: $offwhite;
+   border: $offwhite solid 2px;
+   margin: 4vh auto;
+ }
+ .btn-green:hover {
+   background-color: $offwhite;
+   color: $green;
+   border: $green solid 2px;
+ }
+
+
+form {
+  margin: 4px;
+  text-align: center;
+  margin: 0 auto;
+}
+.input {
+	margin: 4vh auto 0 auto;
 	height: 10vh;
+	background: #FFFFFF;
+}
+textarea {
+  margin: 4vh auto 0 auto;
+
 	background: #FFFFFF;
 }
