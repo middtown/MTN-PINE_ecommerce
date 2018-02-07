@@ -14,8 +14,10 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
@@ -32,6 +34,7 @@
     "pg-hstore": "^2.3.2",
     "request": "^2.83.0",
     "sequelize": "^4.32.6",
+    "sequelize-authentication": "^0.3.0",
     "sequelize-cli": "^3.2.0",
     "session": "^0.1.0"
   }
