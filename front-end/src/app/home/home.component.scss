@@ -3,6 +3,8 @@ $green:#5b665b;
 $offwhite: #f7f7f5;
 
 
+
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -26,10 +28,30 @@ $offwhite: #f7f7f5;
 
 }
 
+h1 {
+  font-family: 'camptonthin';
+  font-size: 90px;
+}
 
 @media only screen
+  and (min-device-width: 380px)
 	and (max-device-width: 768px) {
       .home-bg {
         margin-top: -13vh;
+      }
+      h1 {
+        font-family: 'camptonthin';
+        font-size: 40px;
+      }
+  }
+
+  @media only screen
+	and (max-device-width: 380px) {
+      .home-bg {
+        margin-top: -10vh;
+      }
+      h1 {
+        font-family: 'camptonthin';
+        font-size: 30px;
       }
 	}
