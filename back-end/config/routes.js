@@ -1,4 +1,5 @@
 const express = require('express');
+const passport = require('passport');
 const app = express();
 const router = express.Router();
 const path = require('path');
@@ -24,15 +25,13 @@ router.get('/api/items/:id', itemsController.oneItem);
 
 // Get all users 
 router.get('/api/profile', usersController.user);
-// log in user with passport
-router.post('/api/login', usersController.logIn);
-// log out user with passport
+// log in user 
+// router.post('/api/login', usersController.logIn);
+// log out user 
 router.post('/api/logout', usersController.logOut);
-// Create User with passport 
+// Create User
 router.post('/api/profile/new', usersController.signUp);
-
-// // Create User
-// router.post('/api/profile/new', usersController.createUser);
+// router.post('/api/profile/new', passport.authenticate('local-signup', { successRedirect: '/items', failureRedirect: '/' }));
 
 								// --------------------  User Address Routes. -------------------- //
 
@@ -50,7 +49,6 @@ router.delete('/api/profile/address/:id', usersController.deleteAddress);
 
 									// --------------------  passport Routes. -------------------- //
 
-// passpo routes
 
 
 									// --------------------  End Key Routes. -------------------- //

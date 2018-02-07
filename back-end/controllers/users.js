@@ -18,47 +18,42 @@ const getUserProfile = (req, res, next) => {
 	});
 };
 
-// POST /signup
-const signUp = (req, res, next) => {
-  let signupStrategy = passport.authenticate('local-signup', {
-    successRedirect : '/api/home',
-    failureRedirect : '/api/signup',
-    //failureFlash : true
+// Create User
+const signUp = (req, res) => {
+	console.log(req.body);
+	console.log("create user has been hit");
+	User.create({
+		name: req.body.name,
+		email: req.body.email,
+		password: req.body.password
+	}).then(user => {
+		res.json(user);
+  }).catch(err => {
+  		console.error("create new user failed " + err);
+		res.send("created new user failed " + err);
   });
-
-  return signupStrategy(req, res, next);
 };
 
 
-// // Create User
-// const createUser = (req, res) => {
-// 	console.log(req.body);
-// 	console.log("create user has been hit");
-// 	User.create({
-// 		name: req.body.name,
-// 		email: req.body.email,
-// 		password: req.body.password
-// 	}).then(user => {
-// 		res.json(user);
-//   }).catch(err => {
-//   		console.error("create new user failed " + err);
-// 		res.send("created new user failed " + err);
-//   });
-// };
-
-// ---- passport login 
-
-// POST /login 
+// POST /login
 const logIn = (req, res, next) => {
-    let loginProperty = passport.authenticate('local-login', {
-      successRedirect : '/api/profile',
-      failureRedirect : '/api/login',
-      failureFlash : true
+  if (req.body.email && req.body.password) {
+    User.authenticate(req.body.email, req.body.password, function (error, user) {
+      if (error || !user) {
+        var err = new Error('Wrong email or password.');
+        err.status = 401;
+        return next(err);
+      }  else {
+        req.session.userId = user._id;
+        return res.redirect('/items');
+      }
     });
-
-    return loginProperty(req, res, next);	
+  } else {
+    var err = new Error('Email and password are required.');
+    err.status = 401;
+    return next(err);
+  }
 };
-
 
 
 // GET /logout
@@ -66,8 +61,6 @@ const logOut = (req, res, next) => {
 	req.logout();
   res.redirect('/');
 };
-
-
 
 // User address
 const userAddresses = (req, res) => {
@@ -131,10 +124,9 @@ const deleteAddress = (req, res) => {
 module.exports = {
 
 	user 			: getUserProfile,
-	logIn 			: logIn,
 	logOut 			: logOut,
+	logIn 			: logIn,
 	signUp 			: signUp,
-	// createUser 		: createUser,
 	addresses 		: userAddresses,
 	oneAddress 		: oneAddress,
 	newAddress 		: createNewAddress,
