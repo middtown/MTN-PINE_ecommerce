@@ -18,9 +18,36 @@ $offwhite: #f7f7f5;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -22vh;
+  margin-top: -10vh;
   position: relative;
 }
 .header {
-  color: $offwhite;
+  color: $grey;
+  font-family: 'camptonthin';
+  text-align: center;
 }
+
+.middle {
+  background-color: $offwhite;
+  color: $grey;
+}
+
+.josh {
+  background-image: url('/assets/josh.jpg');
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
+  margin: 0 auto;
+}
+
+@media only screen
+	and (max-device-width: 768px) {
+      .josh {
+        margin-bottom: 3vh;
+      }
+
+  }
