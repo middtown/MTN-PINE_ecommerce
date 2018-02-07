@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+const passport = require('passport');
 const db = require('../models'); //grabbing db from models folder for router controll
 const Item = db.models.Item; //specifies what exaclty the model needed
 const User = db.models.User;
@@ -11,14 +12,14 @@ const path = require('path');
 
 
 // All user profiles
-const getUserProfile = (req, res) => {
+const getUserProfile = (req, res, next) => {
 	User.findAll().then(profile => {
 		res.json(profile);
 	});
 };
 
 // Create User
-const createUser = (req, res) => {
+const signUp = (req, res) => {
 	console.log(req.body);
 	console.log("create user has been hit");
 	User.create({
@@ -31,6 +32,34 @@ const createUser = (req, res) => {
   		console.error("create new user failed " + err);
 		res.send("created new user failed " + err);
   });
+};
+
+
+// POST /login
+const logIn = (req, res, next) => {
+  if (req.body.email && req.body.password) {
+    User.authenticate(req.body.email, req.body.password, function (error, user) {
+      if (error || !user) {
+        var err = new Error('Wrong email or password.');
+        err.status = 401;
+        return next(err);
+      }  else {
+        req.session.userId = user._id;
+        return res.redirect('/items');
+      }
+    });
+  } else {
+    var err = new Error('Email and password are required.');
+    err.status = 401;
+    return next(err);
+  }
+};
+
+
+// GET /logout
+const logOut = (req, res, next) => {  
+	req.logout();
+  res.redirect('/');
 };
 
 // User address
@@ -95,7 +124,9 @@ const deleteAddress = (req, res) => {
 module.exports = {
 
 	user 			: getUserProfile,
-	createUser 		: createUser,
+	logOut 			: logOut,
+	logIn 			: logIn,
+	signUp 			: signUp,
 	addresses 		: userAddresses,
 	oneAddress 		: oneAddress,
 	newAddress 		: createNewAddress,

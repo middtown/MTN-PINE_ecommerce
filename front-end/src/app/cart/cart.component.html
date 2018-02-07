@@ -1,16 +1,15 @@
 <div class="container-fluid">
   <div class="container" *ngIf="cart">
-		
 
     <h2>Cart ({{cart.length}}) <a class="btn btn-primary" routerLink="/checkout" *ngIf="cart.length>0">Checkout</a></h2>
 
 		<div class="container" *ngFor="let item of cart; let i = index">
-			
+
 			<p>{{item.name}}</p>
 
 			<img src="assets/products/{{item.id}}.jpg" alt="Bifold Wallet">
 
-			<button id="remove{{item.id}}" class="btn btn-danger" (click)="removeItem(i)">Remove</button>
+			<button id="remove{{item.id}}" class="btn-red" (click)="removeItem(i)">REMOVE</button>
 
 		</div>
 
