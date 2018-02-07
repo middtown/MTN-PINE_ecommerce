@@ -1,3 +1,7 @@
+$grey:#6a6a6a;
+$green:#5b665b;
+$offwhite: #f7f7f5;
+
 button {
 	max-height: 5vh;
 }
@@ -16,3 +20,16 @@ span {
 	color: #f7f7f5;
 	font-style: italic;
 }
+
+ .btn-green {
+   font-family: 'camptonbook';
+   border-radius: 0;
+   background-color: $green;
+   color: $offwhite;
+   border: $offwhite solid 2px;
+ }
+ .btn-green:hover {
+   background-color: $offwhite;
+   color: $green;
+   border: $green solid 2px;
+ }

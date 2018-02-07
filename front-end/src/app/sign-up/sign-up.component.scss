@@ -23,8 +23,10 @@ form {
    border-radius: 0;
    background-color: $offwhite;
    color: $green;
+   border: $green solid 2px;
  }
  .btn-green:hover {
    background-color: $green;
    color: $offwhite;
+   border: $offwhite solid 2px;
  }
