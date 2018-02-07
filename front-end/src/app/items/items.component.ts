@@ -33,7 +33,6 @@ export class ItemsComponent implements OnInit {
     
     this.itemService.getItems()
     .subscribe((res)=> {
-      console.log(res.json());
       this.items = res.json();
     });
   }
