@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Item } from '../items/item';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-checkout',

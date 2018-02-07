@@ -7,6 +7,9 @@ $offwhite: #f7f7f5;
 // navbar //
 ////////////
 
+button, a {
+  cursor: pointer;
+}
 .logoMain {
   max-height: 50px;
 }
@@ -144,8 +147,6 @@ div.col.col-6 {
 div.col.col-6, .container-fluid, .dropdown-item {
   padding: 0;
 }
-
-
 
 ////////////
 // Footer //
