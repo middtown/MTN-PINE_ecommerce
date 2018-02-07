@@ -13,6 +13,11 @@ button {
 .row {
 	margin: 20px;
 }
+
+.alert{
+    display: none;
+}
+
 img {
   height: 100%;
   border: $grey solid 2px;
