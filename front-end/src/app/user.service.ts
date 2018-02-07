@@ -14,6 +14,7 @@ export class UserService {
 	saveUser(newUser) {
 		console.log("from services"); 
 		console.log(newUser);
+		this.currentUser = newUser;
 		return this.http.post(`${this.baseUrl}/api/profile/new`, newUser);
 	}
 
@@ -22,12 +23,12 @@ export class UserService {
 		console.log(user);
 		// validate?
 		this.currentUser = user;
-		return of(user);
+		return of(this.currentUser);
 	}
 
 	getUser() {
 		console.log('getUser()');
-		return this.http.get(`${this.baseUrl}/api/profile`);
+		return of(this.currentUser);
 	}
 
   constructor(private http :Http) { }
