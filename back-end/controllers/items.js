@@ -34,7 +34,7 @@ const itemsByCategory = (req, res) => {
 	// res.send(req.params.cat);
 	// SELECT * FROM post WHERE authorId = 2
 	Post.findAll({ where: {
-	    category: req.params.cat,
+	    category: req.params.catagory,
 	    quantity: 'active'
 	  }
 	});
