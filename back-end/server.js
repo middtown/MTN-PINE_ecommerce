@@ -18,17 +18,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 //serves static files
 app.use(express.static(__dirname + '/dist'));
 
-
-//CORS setup to allow other ports from this host
-if(!process.env.DYNO) {
-	app.use( (req, res, next) => {
-	  res.header("Access-Control-Allow-Origin", "*");
-	  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	  next();
-	});
-}
-
-// routes
 const mtnpineRouter = require('./config/routes.js');
 app.use(mtnpineRouter);
 
@@ -60,7 +49,6 @@ app.use((req, res, next) => {
 	res.locals.currentUser = req.user;
 	next();
 });
-
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
