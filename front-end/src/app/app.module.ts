@@ -19,6 +19,7 @@ import { LogInComponent } from './log-in/log-in.component';
 import { AboutDevsComponent } from './about-devs/about-devs.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 import { ItemService } from './item.service';
 import { CartService } from './cart.service';
@@ -37,7 +38,8 @@ import { UserService } from './user.service';
     SignUpComponent,
     LogInComponent,
     AboutDevsComponent,
-    ProfileComponent
+    ProfileComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
