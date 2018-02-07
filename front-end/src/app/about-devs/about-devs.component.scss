@@ -10,6 +10,10 @@ p {
   font-family: 'camptonmedium';
 }
 
+.name {
+  margin: 10px 0;
+}
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -39,6 +43,12 @@ h4 {
   text-align: center;
   margin: 0 auto;
 }
+
+a {
+  color: $grey;
+  margin: 10px;
+}
+
 
 .text {
   border: $grey solid 2px;
