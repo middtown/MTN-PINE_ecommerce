@@ -7,7 +7,6 @@ const chai = require('chai');
 const expect = require('chai').expect;
 const assert = require('chai').assert;
 const should = require('chai').should() //actually call the function
-const server = require('../server');
 
 // Connection to heroku and local comp for three people.
 const localHost = require("../env.js") || process.env.AARONSLOCALMACHINE || process.env.JOSHUASLOCALMACHINE || process.env.RICKYSLOCALMACHINE;
@@ -16,11 +15,16 @@ let sequelize = new Sequelize(process.env.DATABASE_URL || localHost.aaron || loc
 
 describe('#createUser()', () => {
 	
+	beforeEach((done)=> {
+		const server = require('../server');
+		done();
+	});
+
 	it('should GET all the items', (done) => {
     	Item.findAll().then(items => {
-		items.body.should.be.a('object');
-        done();
-        });
+				items.should.be.a('object');
+      });
+    	done();
   	});
 	
 	it('should save without error', done => {
@@ -30,9 +34,8 @@ describe('#createUser()', () => {
 			password: 'JimmyIsAwesom206!'
 			}).then( newUser => {
 			expect(newUser.name).to.equal('Jimmy Hendricks');
-			console.log(newUser);
-			done();
 		});
+		done();
 	});
 
 	it('should create address without error', done => {
@@ -45,9 +48,8 @@ describe('#createUser()', () => {
 		    postalCode: 60007 
 			}).then(newAddress => {
 				expect(newAddress.nickname).to.equal('The Chi');
-				console.log(newAddress);
-				done();
 		});
+		done();
 	});
 });
 
