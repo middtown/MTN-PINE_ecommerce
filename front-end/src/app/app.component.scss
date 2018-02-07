@@ -17,9 +17,9 @@ $offwhite: #f7f7f5;
   left:-66px;
 }
 
-
-.nav {
-  width: 100%;
+//to override Bootstrap
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+  color: $green;
 }
 
 nav {
@@ -30,12 +30,17 @@ nav {
 .dropdown-menu.show {
   background-color: $offwhite;
   margin-top: 2vh;
+  padding-right: 15vh;
+}
+
+.dropdown-item {
+  padding: 0px;
 }
 
 .dropdown-toggle::after {
   display:none;
+  color: $green;
 }
-
 
 .site-header a {
   transition: ease-in-out color .15s;
@@ -109,7 +114,7 @@ nav {
 	}
 
 	.modal-header {
-		border-bottom-color: $green;
+		// border-bottom-color: $green;
     background-color: $offwhite;
     height: 76px;
   }
@@ -118,6 +123,9 @@ nav {
     background-color: $offwhite;
   }
 
+  .modal-title {
+    text-align: center;
+  }
 
 /*
  * Extra utilities
@@ -148,12 +156,13 @@ div.col.col-6 {
 
 footer {
   background-color: $green;
-  background-image: url('/assets/topogreen.jpg');
+  // background-image: url('/assets/topogreen.jpg');
   background-size: contain;
   width: 100%;
   color: $offwhite;
   text-align: center;
   display: block;
+  font-family: 'camptonthin';
 
 	//text-muted color
 	a {
@@ -166,7 +175,8 @@ footer {
 }
 
 .mpLogo {
-  height: 30px;
+  height: 80px;
+  margin-bottom: -12vh;
 
 }
 
