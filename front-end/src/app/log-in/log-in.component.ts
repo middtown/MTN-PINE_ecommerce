@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
 })
 export class LogInComponent implements OnInit {
 
-	currentUser = {};
+	currentUser = <any>{};
 
 	thisUser = <any>{};
 

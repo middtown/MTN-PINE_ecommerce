@@ -9,7 +9,7 @@ export class UserService {
 	// baseUrl = 'http://localhost:3000';
 	baseUrl = 'http://mtnpine.herokuapp.com';
 
-	currentUser = {};
+	currentUser = <any>{};
 	
 	saveUser(newUser) {
 		console.log("from services"); 
@@ -28,6 +28,7 @@ export class UserService {
 
 	getUser() {
 		console.log('getUser()');
+		if(!this.currentUser) { this.currentUser = {} }
 		return of(this.currentUser);
 	}
 
