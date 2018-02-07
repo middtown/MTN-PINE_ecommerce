@@ -11,14 +11,25 @@ button {
 	padding: 1vh 0;
 }
 .row {
-	color: rgb(247, 247, 245);
+	margin: 20px;
 }
 img {
-	height: 100%;
+  height: 100%;
+  border: $grey solid 2px;
+  padding: 0;
 }
 span {
-	color: #f7f7f5;
-	font-style: italic;
+	color: $grey;
+}
+h2 {
+  color: $grey;
+}
+.text {
+  color: $green;
+}
+
+.text-body {
+  padding-left: 30px;
 }
 
  .btn-green {
