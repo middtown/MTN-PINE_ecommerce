@@ -18,9 +18,10 @@ describe('#createUser()', () => {
 	
 	it('should GET all the items', (done) => {
     	Item.findAll().then(items => {
-		items.body.should.be.a('object');
-        done();
+		items.should.be.a('object');
         });
+        done();
+
   	});
 	
 	it('should save without error', done => {
@@ -31,8 +32,8 @@ describe('#createUser()', () => {
 			}).then( newUser => {
 			expect(newUser.name).to.equal('Jimmy Hendricks');
 			console.log(newUser);
-			done();
 		});
+			done();
 	});
 
 	it('should create address without error', done => {
@@ -46,8 +47,8 @@ describe('#createUser()', () => {
 			}).then(newAddress => {
 				expect(newAddress.nickname).to.equal('The Chi');
 				console.log(newAddress);
-				done();
 		});
+				done();
 	});
 });
 
