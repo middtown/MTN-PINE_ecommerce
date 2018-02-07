@@ -32,8 +32,6 @@ if(!process.env.DYNO) {
 	});
 }
 
-const mtnpineRouter = require('./config/routes.js');
-app.use(mtnpineRouter);
 
 // initialize passport stuff -- For Passport
 app.use(session({ secret: 'mtnpinedabest',resave: true, saveUninitialized:false})); // session secret
@@ -58,6 +56,9 @@ app.use((req, res, next) => {
 	res.locals.currentUser = req.user;
 	next();
 });
+
+const mtnpineRouter = require('./config/routes.js');
+app.use(mtnpineRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, (err) => {
