@@ -50,13 +50,6 @@ nav {
   text-decoration: none;
   background-color: $green;
 }
-// .container {
-//   width: 100%;
-// }
-.cart{
-  // margin-top: -120px;
-  // z-index: -5;
-}
 .person {
   color: $green;
   background: transparent;
@@ -144,7 +137,10 @@ div.col.col-6 {
 	width: 50vw;
 }
 
-// Padding 0
+///////////////
+// Padding 0 //
+///////////////
+
 div.col.col-6, .container-fluid, .dropdown-item {
   padding: 0;
 }
