@@ -1,3 +1,10 @@
-<p>
-  checkout works!
-</p>
+<div class="container">
+	<form class="row" action="https://formspree.io/josh@mtnpine.us.com"
+	      method="POST">
+	    <input class="col-6" type="text" name="name" placeholder="Name" required>
+	    <input class="col-6" type="email" name="_replyto" placeholder="Paypal Address" required>
+	    <input class="col-10" type="text" name="_subject" placeholder="Message" required>
+	    <input type="hidden" name="message" value="{{cart | json}}" required>
+	    <input class="col-2 text-center btn btn-primary" type="submit" name="action" value="Send">
+	</form>
+</div>
