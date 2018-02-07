@@ -6,6 +6,7 @@ import { ItemsComponent } from './items/items.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AboutDevsComponent } from './about-devs/about-devs.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes :Routes = [
 	{
@@ -33,7 +34,11 @@ const routes :Routes = [
 	{
 		path: 'contact',
 		component: ContactComponent
-	}
+	},
+	{
+		path: 'checkout',
+		component: CheckoutComponent
+	}	
 ];
 
 @NgModule({

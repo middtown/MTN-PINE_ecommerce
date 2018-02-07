@@ -9,13 +9,14 @@ import { UserService } from '../user.service';
 })
 export class LogInComponent implements OnInit {
 
-	currentUser = <any>{};
+	currentUser = {};
 
-	onLogIn(currentUser) {
-		this.userService.logInUser(currentUser)
+	thisUser = <any>{};
+
+	onLogIn(thisUser) {
+		this.userService.logInUser(thisUser)
 		.subscribe((res)=> {
 			this.currentUser = res;
-			this.userService.currentUser = currentUser;
 			this.router.navigate(["/items"]);
 		});
 	}
