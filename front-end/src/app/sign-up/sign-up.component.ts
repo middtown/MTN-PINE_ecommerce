@@ -15,9 +15,8 @@ export class SignUpComponent implements OnInit {
 		if(newUser.name && newUser.email && newUser.password && (newUser.password == newUser.verifyPassword)) {
 			this.userService.saveUser(newUser)
 			.subscribe((response)=> {
-				let user = response.json();
+				let user = response;
 				console.log('newUser');
-				console.log(response);
 				console.log(user);
 				this.userService.currentUser = user;
 				this.router.navigate(["/items"]);

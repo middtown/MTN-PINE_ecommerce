@@ -1,4 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule }   from '@angular/forms';
+
+import { CartService } from '../cart.service';
+import { Item } from '../items/item';
 
 import { CheckoutComponent } from './checkout.component';
 
@@ -8,7 +12,9 @@ describe('CheckoutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CheckoutComponent ]
+      declarations: [ CheckoutComponent ],
+      imports: [ FormsModule ],
+      providers: [ CartService ]
     })
     .compileComponents();
   }));
