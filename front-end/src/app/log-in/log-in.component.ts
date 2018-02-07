@@ -17,6 +17,7 @@ export class LogInComponent implements OnInit {
 		this.userService.logInUser(thisUser)
 		.subscribe((res)=> {
 			this.currentUser = res;
+			$('#modalLogin').modal('hide');
 			this.router.navigate(["/items"]);
 		});
 	}

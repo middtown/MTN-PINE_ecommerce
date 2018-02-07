@@ -20,6 +20,7 @@ export class CheckoutComponent implements OnInit {
 		.subscribe((res)=> {
 	    console.log('cart.component.ngOnInit');
 			console.log(res);
+			$('#modalCart').modal('hide');
 			this.cart = res;
 		});
   }

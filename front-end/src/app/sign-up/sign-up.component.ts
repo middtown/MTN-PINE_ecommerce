@@ -19,6 +19,7 @@ export class SignUpComponent implements OnInit {
 				console.log('newUser');
 				console.log(user);
 				this.userService.currentUser = user;
+				$('#modalSignup').modal('hide');
 				this.router.navigate(["/items"]);
 			});
 		} else {
