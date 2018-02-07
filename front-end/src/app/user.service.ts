@@ -6,8 +6,8 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class UserService {
 
-	baseUrl = 'http://localhost:3000';
-	// baseUrl = 'http://mtnpine.herokuapp.com';
+	// baseUrl = 'http://localhost:3000';
+	baseUrl = 'http://mtnpine.herokuapp.com';
 
 	currentUser = {};
 	

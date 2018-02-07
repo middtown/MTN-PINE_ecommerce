@@ -9,6 +9,10 @@ const User = db.models.User;
 const Address = db.models.Address;
 const path = require('path');
 
+// home route after sign in
+const home = (req, res) => {
+	res.send("<h1> You are at the home route </h1>");
+};
 
 // Find all items in the items table
 const getItems = (req, res) => {
@@ -28,8 +32,11 @@ const itemsById = (req, res) => {
 const itemsByCategory = (req, res) => {
 	console.log(req.params.cat);
 	// res.send(req.params.cat);
-	Item.findOne({ where: {category: req.params.cat} }).then ( aCategory => {
-		res.json(aCategory);
+	// SELECT * FROM post WHERE authorId = 2
+	Post.findAll({ where: {
+	    category: req.params.cat,
+	    quantity: 'active'
+	  }
 	});
 };
 
@@ -37,7 +44,7 @@ const allItemsByCategory = (req, res)=> {
 	Item.findAll().then(items => {
 		res.json(items);
 	});
-}
+};
 
 
 //Put the app.get part below any back end routes, because it creates a route that defaults 
@@ -47,6 +54,7 @@ const frontEnd = (req, res) => {
 };
 
 module.exports = {
+	home 			: home,
 	items 			: getItems,
 	oneItem 		: itemsById,
 	category 		: itemsByCategory,
