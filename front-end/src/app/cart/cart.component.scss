@@ -1,3 +1,8 @@
+$grey:#6a6a6a;
+$green:#5b665b;
+$offwhite: #f7f7f5;
+
+
 .container-fluid {
   padding: 1vh 1vw;
 }
@@ -12,3 +17,16 @@
 img {
 	max-width: 25vw;
 }
+
+ .btn-red {
+   font-family: 'camptonbook';
+   border-radius: 0;
+   background-color: #803737;
+   color: $offwhite;
+   border: $offwhite solid 2px;
+ }
+ .btn-red:hover {
+   background-color: $offwhite;
+   color: #803737;
+   border: #803737 solid 2px;
+ }
