@@ -2,6 +2,14 @@ $grey:#6a6a6a;
 $green:#5b665b;
 $offwhite: #f7f7f5;
 
+p {
+  font-family: 'camptonlight';
+}
+
+.bold{
+  font-family: 'camptonmedium';
+}
+
 .container-fluid {
   background-color: rgba(247, 247, 245, .5);
 }
@@ -34,6 +42,14 @@ $offwhite: #f7f7f5;
 
 .josh {
   background-image: url('/assets/josh.jpg');
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cut {
+  background-image: url('/assets/cut.jpg');
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
