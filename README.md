@@ -8,9 +8,10 @@ A means of inspiration for adventure and a vessel for a story.
 
 ## Development
 
-[Trello Boards](https://trello.com/mtnpine)
+[Trello Boards](https://trello.com/b/1dyC1IC6/mtn-pine)
 
-[Wireframes](./readme/wireframes.png)
+[Wireframes](/readme/wireframes.png)
+
 
 ## User Research
 
