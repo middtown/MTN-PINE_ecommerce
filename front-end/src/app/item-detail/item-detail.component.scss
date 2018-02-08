@@ -4,6 +4,7 @@ $offwhite: #f7f7f5;
 
 button {
 	max-height: 5vh;
+  cursor: pointer;
 }
 .container-fluid {
 	background-color: rgba(247, 247, 245, .25);
@@ -49,6 +50,7 @@ h2 {
    background-color: $green;
    color: $offwhite;
    border: $offwhite solid 2px;
+   cursor: pointer;
  }
  .btn-green:hover {
    background-color: $offwhite;

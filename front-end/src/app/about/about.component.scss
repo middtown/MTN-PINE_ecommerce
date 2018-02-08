@@ -10,21 +10,17 @@ p {
   font-family: 'camptonmedium';
 }
 
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .home-bg {
   background-image: url('/assets/foggyTrees.jpg');
   height: 100%;
+  margin-top: -10vh;
+  position: relative;
+}
+.parallax, .home-bg {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -10vh;
-  position: relative;
 }
 .header {
   color: $grey;
@@ -40,14 +36,13 @@ p {
 
 .josh {
   background-image: url('/assets/josh.jpg');
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .cut {
   background-image: url('/assets/cut.jpg');
+}
+
+.josh, .cut {
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
