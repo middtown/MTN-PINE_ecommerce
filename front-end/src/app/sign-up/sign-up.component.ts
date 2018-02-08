@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import * as $ from 'jquery';
+import 'jquery';
+
 
 @Component({
   selector: 'app-sign-up',
@@ -19,6 +22,7 @@ export class SignUpComponent implements OnInit {
 				console.log('newUser');
 				console.log(user);
 				this.userService.currentUser = user;
+				$('#modalSignUp').modal('hide');
 				this.router.navigate(["/items"]);
 			});
 		} else {

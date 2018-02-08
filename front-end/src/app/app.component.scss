@@ -7,10 +7,12 @@ $offwhite: #f7f7f5;
 // navbar //
 ////////////
 
+button, a {
+  cursor: pointer;
+}
 .logoMain {
   max-height: 50px;
 }
-
 .nav-center {
   position:relative;
   margin:0 auto;
@@ -49,13 +51,6 @@ nav {
   color: $offwhite;
   text-decoration: none;
   background-color: $green;
-}
-// .container {
-//   width: 100%;
-// }
-.cart{
-  // margin-top: -120px;
-  // z-index: -5;
 }
 .person {
   color: $green;
@@ -144,12 +139,13 @@ div.col.col-6 {
 	width: 50vw;
 }
 
-// Padding 0
+///////////////
+// Padding 0 //
+///////////////
+
 div.col.col-6, .container-fluid, .dropdown-item {
   padding: 0;
 }
-
-
 
 ////////////
 // Footer //
