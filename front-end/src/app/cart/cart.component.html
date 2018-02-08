@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="container" *ngIf="cart">
 
-    <h2>Cart ({{cart.length}}) <a class="btn btn-primary" routerLink="/checkout" (click)="closeModal" *ngIf="cart.length>0">Checkout</a></h2>
+    <h2>Cart ({{cart.length}}) <a class="btn btn-primary" routerLink="/checkout" data-dismiss="modal" *ngIf="cart.length>0">Checkout</a></h2>
 
 		<div class="container" *ngFor="let item of cart; let i = index">
 

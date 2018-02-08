@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 import * as $ from 'jquery';
 
+
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
