@@ -2,6 +2,10 @@ $grey:#6a6a6a;
 $green:#5b665b;
 $offwhite: #f7f7f5;
 
+/////////////////////////
+// parallax background //
+/////////////////////////
+
 p {
   font-family: 'camptonlight';
 }
@@ -66,17 +70,7 @@ img {
 .container-fluid {
 	padding: 0;
 }
-// .bg-container {
-// 	background-image: url('/assets/background1.jpg');
-// 	height: 100%;
-// 	background-attachment: fixed;
-// 	background-position: center;
-// 	background-repeat: no-repeat;
-// 	background-size: cover;
-// 	margin-top: - 180px;
-// 	position: relative;
-// 	padding-top: 15vh;
-// }
+
 .col {
 	background-color: rgba(247, 247, 245, .5);
 	margin: 0;
