@@ -12,6 +12,17 @@ router.get('/api', (req, res) => {
     res.send("Welcome to the MTN-PINE A.P.I. !");
   });
 
+
+									// --------------------  passport Routes. -------------------- //
+
+
+function authenticatedUser(req, res, next) {
+  // If the user is authenticated, then we continue the execution
+  if (req.isAuthenticated()) return next();
+
+  // Otherwise the request is always redirected to the home page
+  res.redirect('/');
+}
 									// --------------------   Item Routes. -------------------- //
 
 // index
@@ -47,7 +58,6 @@ router.delete('/api/profile/address/:id', usersController.deleteAddress);
 
 
 
-									// --------------------  passport Routes. -------------------- //
 
 
 

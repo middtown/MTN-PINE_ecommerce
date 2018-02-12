@@ -6,8 +6,8 @@ const User = require('../models/user');
 
 module.exports = (passport, user) => {
     console.log("right inside of function");
-    //let User = user;
-    //let LocalStrategy = require('passport-local').Strategy;
+    let User = user;
+    let LocalStrategy = require('passport-local').Strategy;
     
     passport.serializeUser((user, done) => {
         console.log("user id");
@@ -20,15 +20,15 @@ module.exports = (passport, user) => {
         console.log(id);
         User.findById(id).then((err, user) => {
             done(err, user);
-            // if (user) {
-            //     console.log("get function");
-            //     console.log(user.get());
-            //     done(null, user.get());
-            // } else {
-            //     console.log("errors");
-            //     console.log(user.errors);
-            //     done(user.errors,null);
-            // }
+            if (user) {
+                console.log("get function");
+                console.log(user.get());
+                done(null, user.get());
+            } else {
+                console.log("errors");
+                console.log(user.errors);
+                done(user.errors,null);
+            }
         });
     });
 
@@ -44,9 +44,9 @@ module.exports = (passport, user) => {
                     console.log(email);
                     console.log(password);
 
-        //         let generateHash = (password) => {
-        //         return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
-        // };
+                let generateHash = (password) => {
+                return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
+        };
 
             User.findOne({
                 where: { email: email }}).then((user) => {

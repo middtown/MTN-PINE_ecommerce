@@ -10,16 +10,16 @@ module.exports = (sequelize, Sequelize) => {
 	    password: {type: Sequelize.STRING, unique: true, required: true, password: true}, 
 	    shippingAddress_id: Sequelize.INTEGER,
 	    order_id: Sequelize.INTEGER
-  // }, {
-  // 	freezeTableName: true,
-  // 	instanceMethods: {
-  // 		generateHash(password) {
-  // 			return bcrypt.has(password, bcrypt.genSaltSync(8));
-  // 		},
-  // 		validPassword(password) {
-  // 			return bcrypt.compare(password, this.password);
-  // 		}
-  // 	}
+  }, {
+  	freezeTableName: true,
+  	instanceMethods: {
+  		generateHash(password) {
+  			return bcrypt.has(password, bcrypt.genSaltSync(8));
+  		},
+  		validPassword(password) {
+  			return bcrypt.compare(password, this.password);
+  		}
+  	}
   });  
   return User;
 };
