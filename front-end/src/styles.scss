@@ -9,6 +9,11 @@ $grey:#6a6a6a;
 $green:#5b665b;
 $offwhite: #f7f7f5;
 
+
+/////////////////////
+// importing fonts //
+/////////////////////
+
 @font-face {
     font-family: 'camptonblack';
     src: url('/assets/fonts/rene_bieder_-_campton_black-webfont.woff2') format('woff2'),
@@ -106,7 +111,9 @@ $offwhite: #f7f7f5;
 
 }
 
-
+//////////////////
+// Global Style //
+//////////////////
 
 
 body{
