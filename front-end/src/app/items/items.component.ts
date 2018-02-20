@@ -16,7 +16,7 @@ export class ItemsComponent implements OnInit {
   onSelect(item :number) :void{
     this.selectedItem = item;
     window.scroll({
-      top: 0,
+      top: 320,
       left: 0,
       behavior: 'smooth'
     });

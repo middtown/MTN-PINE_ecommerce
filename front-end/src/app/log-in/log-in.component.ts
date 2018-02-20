@@ -16,13 +16,17 @@ export class LogInComponent implements OnInit {
 	thisUser = <any>{};
 
 	onLogIn(thisUser) {
-		this.userService.logInUser(thisUser)
-		.subscribe((res)=> {
-			this.currentUser = res;
-			// technically works on ng serve, but throws error
-			// $('#modalLogin').modal('hide');
-			this.router.navigate(["/items"]);
-		});
+		if(thisUser.email && thisUser.password) {
+			this.userService.logInUser(thisUser)
+			.subscribe((res)=> {
+				this.currentUser = res;
+				// technically works on ng serve, but throws error
+				// $('#modalLogin').modal('hide');
+				this.router.navigate(["/items"]);
+			});
+		} else {
+			thisUser.email = "Please enter all correct info.";
+		}
 	}
 
   constructor(
