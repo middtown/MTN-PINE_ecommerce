@@ -18,6 +18,11 @@ button, a {
   margin:0 auto;
   left:-50px;
 }
+.navbar-toggler {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+}
 
 //to override Bootstrap
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {

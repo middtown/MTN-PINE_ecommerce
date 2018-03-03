@@ -46,124 +46,127 @@
 
 
 
+
+
+<!-- Login Modal -->
+<div class="modal right fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="modalLogin">LOGIN</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <app-log-in></app-log-in>
+        <hr>
+        <p>Need an account?
+          <a data-dismiss="modal" data-toggle="modal" data-target="#modalSignUp">Sign Up</a>
+        </p>
+
+        <!-- display current user, can be relocated -->
+        <!-- <app-profile></app-profile> -->
+
+      </div>
+
+    </div>
+    <!-- modal-content -->
+  </div>
+  <!-- modal-dialog -->
+</div>
+<!-- Login modal -->
+
+<!-- Sign Up Modal -->
+<div class="modal right fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUp">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="modalSignUp">SIGN UP</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <app-sign-up></app-sign-up>
+        <hr>
+        <p>Already have an account?
+          <a data-dismiss="modal" data-toggle="modal" data-target="#modalLogin">Login</a>
+        </p>
+      </div>
+
+    </div>
+    <!-- modal-content -->
+  </div>
+  <!-- modal-dialog -->
+</div>
+<!-- Sign Up modal -->
+
+<!-- Cart Modal -->
+<div class="modal right fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="modalCart">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="modalCart">CART</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <app-cart></app-cart>
+
+      </div>
+
+    </div>
+    <!-- modal-content -->
+  </div>
+  <!-- modal-dialog -->
+</div>
+<!-- Cart modal -->
+
+
 <router-outlet></router-outlet>
 
 
-  <!-- Login Modal -->
-  <div class="modal right fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
+<footer id="footer" class="py-2">
 
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="modalLogin">LOGIN</h4>
-        </div>
+<img class="mpLogo" src="/assets/logoWhite.png" alt="logo">
 
-        <div class="modal-body">
+  <div class="container-fluid row">
 
-          <app-log-in></app-log-in>
-          <hr>
-          <p>Need an account?
-            <a data-dismiss="modal" data-toggle="modal" data-target="#modalSignUp">Sign Up</a>
-          </p>
-
-          <!-- display current user, can be relocated -->
-          <!-- <app-profile></app-profile> -->
-
-        </div>
-
-      </div>
-      <!-- modal-content -->
+    <div class="col col-6">
+      <h5>Follow</h5>
+      <ul class="list-unstyled text-small">
+        <li>
+          <a href="https://www.instagram.com/mtnpine/" onclick="trackOutboundLink('https://www.instagram.com/mtnpine/')">Instagram</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mtnpinedesigns/" onclick="trackOutboundLink('https://www.facebook.com/mtnpinedesigns/')">Facebook</a>
+        </li>
+      </ul>
     </div>
-    <!-- modal-dialog -->
+
+    <div class="col col-6">
+      <h5>Contact</h5>
+      <ul class="list-unstyled text-small">
+        <li>
+          <a routerLink="/contact">Email</a>
+        </li>
+        <li>
+          <a routerLink="/about-devs">Devs</a>
+        </li>
+      </ul>
+    </div>
+
   </div>
-  <!-- Login modal -->
-
-  <!-- Sign Up Modal -->
-  <div class="modal right fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUp">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="modalSignUp">SIGN UP</h4>
-        </div>
-
-        <div class="modal-body">
-
-          <app-sign-up></app-sign-up>
-          <hr>
-          <p>Already have an account?
-            <a data-dismiss="modal" data-toggle="modal" data-target="#modalLogin">Login</a>
-          </p>
-        </div>
-
-      </div>
-      <!-- modal-content -->
-    </div>
-    <!-- modal-dialog -->
-  </div>
-  <!-- Sign Up modal -->
-
-  <!-- Cart Modal -->
-  <div class="modal right fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="modalCart">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="modalCart">CART</h4>
-        </div>
-
-        <div class="modal-body">
-
-          <app-cart></app-cart>
-
-        </div>
-
-      </div>
-      <!-- modal-content -->
-    </div>
-    <!-- modal-dialog -->
-  </div>
-  <!-- Cart modal -->
-
-  <footer id="footer" class="py-2">
-
-  <img class="mpLogo" src="/assets/logoWhite.png" alt="logo">
-
-    <div class="container-fluid row">
-
-      <div class="col col-6">
-        <h5>Follow</h5>
-        <ul class="list-unstyled text-small">
-          <li>
-            <a href="https://www.instagram.com/mtnpine/" onclick="trackOutboundLink('https://www.instagram.com/mtnpine/')">Instagram</a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/mtnpinedesigns/" onclick="trackOutboundLink('https://www.facebook.com/mtnpinedesigns/')">Facebook</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col col-6">
-        <h5>Contact</h5>
-        <ul class="list-unstyled text-small">
-          <li>
-            <a routerLink="/contact">Email</a>
-          </li>
-          <li>
-            <a routerLink="/about-devs">Devs</a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </footer>
+</footer>
 
