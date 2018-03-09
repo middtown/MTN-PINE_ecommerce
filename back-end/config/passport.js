@@ -5,59 +5,62 @@ const LocalStrategy   = require('passport-local').Strategy;
 const User = require('../models/user');
 
 module.exports = (passport, user) => {
-    console.log("right inside of function");
+    console.log('right inside of function');
+
     //let User = user;
     //let LocalStrategy = require('passport-local').Strategy;
-    
+
     passport.serializeUser((user, done) => {
-        console.log("user id");
+        console.log('user id');
         console.log(user.id);
         done(null, user.id);
-    });
+      });
 
     passport.deserializeUser((id, done) => {
-        console.log("just id");
-        console.log(id);
-        User.findById(id).then((err, user) => {
+          console.log('just id');
+          console.log(id);
+          User.findById(id).then((err, user) => {
             done(err, user);
+
             // if (user) {
-            //     console.log("get function");
+            //     console.log('get function');
             //     console.log(user.get());
             //     done(null, user.get());
             // } else {
-            //     console.log("errors");
+            //     console.log('errors');
             //     console.log(user.errors);
             //     done(user.errors,null);
             // }
+          });
         });
-    });
 
     passport.use('local-signup', new LocalStrategy(
         {
             name: 'name',
             email: 'email',
             password: 'password',
-            passReqToCallback: true // allows us to pass back the entire request to the callback
-     
-        }, (req, email, password, done) => {
-                    console.log("passport dot use");
+            passReqToCallback: true, // allows us to pass back the entire request to the callback
+
+          }, (req, email, password, done) => {
+                    console.log('passport dot use');
                     console.log(email);
                     console.log(password);
 
-        //         let generateHash = (password) => {
-        //         return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
-        // };
+                    //let generateHash = (password) => {
+                    //return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
+                    // };
 
-            User.findOne({
-                where: { email: email }}).then((user) => {
-                    if (user)
+                    User.findOne({
+                      where: { email: email }}).then((user) => {
+                        if (user)
                     {
-                    return done(null, false, { message: 'That email is already taken' });                
+                          return done(null, false,
+                          { message: 'That email is already taken' });
                     } else {
                         let userPassword = generateHash(password);
-             
+
                         let data =
-             
+
                         {
                             name: req.body.name,
                             email: email,
@@ -133,7 +136,7 @@ module.exports = (passport, user) => {
 //                     newUser.local.email    = email;
 //                     newUser.local.password = newUser.generateHash(password);
 
-//                     });            
+//                     });
 //           }
 //         });
 //         };
@@ -342,4 +345,3 @@ module.exports = (passport, user) => {
 //         })
 //     }
 // ))
-
