@@ -19,6 +19,10 @@ let User = sequelize.import('./user');
 let Address = sequelize.import('./shippingAddress');
 let Order = sequelize.import('./order');
 
+User.hasMany(Order, { foreignKey: 'user_id' });
+User.hasMany(Address, { foreignKey: 'user_id' });
+Order.hasMany(Item, { foreignKey: 'order_id' });
+
 module.exports.models = {
   Item: Item,
   User: User,

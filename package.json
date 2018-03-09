@@ -22,6 +22,7 @@
   "homepage": "https://github.com/middtown/MTN-PINE_ecommerce#readme",
   "dependencies": {
     "express-sessions": "^1.0.6",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "typescript": "^2.6.2"
   }
 }

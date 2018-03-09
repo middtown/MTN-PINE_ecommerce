@@ -4,7 +4,6 @@ import { of } from 'rxjs/observable/of';
 import { HttpModule, Http } from '@angular/http';
 
 import { Item } from './items/item';
-import { ITEMS } from './items/mock-items';
 
 @Injectable()
 export class ItemService {
