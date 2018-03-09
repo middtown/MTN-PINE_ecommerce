@@ -110,7 +110,7 @@ the terms above.
 MIT
 MIT
 
-bootstrap@4.0.0-beta
+bootstrap@4.0.0-beta.2
 MIT
 The MIT License (MIT)
 

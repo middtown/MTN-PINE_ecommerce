@@ -54,14 +54,17 @@ form {
   margin: 4px;
   text-align: center;
   margin: 0 auto;
+  min-width: 325px;
+  max-width: 100vw;
 }
 .input {
-	margin: 4vh auto 0 auto;
-	height: 10vh;
+	margin: 3vh auto 0 auto;
+	height: 3rem;
 	background: #FFFFFF;
+  border: 1px solid $green;
 }
 textarea {
-  margin: 4vh auto 0 auto;
-
+  margin: 3vh auto 0 auto;
+  border: 1px solid $green;
 	background: #FFFFFF;
 }
